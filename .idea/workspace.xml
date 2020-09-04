@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3bb8ad05-33a2-489a-a61b-64d62ebd05dc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1grM4DBfI9mci0sPYPCIbQlOUsq" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.craftless.tutorial.blocks" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3bb8ad05-33a2-489a-a61b-64d62ebd05dc" name="Default Changelist" comment="" />
+      <created>1598868070951</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598868070951</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2029" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598870091613">
+      <screen x="1440" y="-76" width="1920" height="1057" />
+    </state>
+    <state x="2029" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.-76.1920.1057/0.23.1440.877@1440.-76.1920.1057" timestamp="1598870091613" />
+    <state x="2378" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1598869777408">
+      <screen x="1440" y="-76" width="1920" height="1057" />
+    </state>
+    <state x="2378" y="155" key="#com.intellij.ide.util.MemberChooser/1440.-76.1920.1057/0.23.1440.877@1440.-76.1920.1057" timestamp="1598869777408" />
+    <state x="2303" y="195" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599116064416">
+      <screen x="1440" y="-76" width="1920" height="1057" />
+    </state>
+    <state x="2303" y="195" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1440.-76.1920.1057/0.23.1440.877@1440.-76.1920.1057" timestamp="1599116064416" />
+    <state x="1745" y="17" key="SettingsEditor" timestamp="1598868947026">
+      <screen x="1440" y="-76" width="1920" height="1057" />
+    </state>
+    <state x="229" y="100" key="SettingsEditor/1440.-76.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1598868248316" />
+    <state x="1745" y="17" key="SettingsEditor/1440.-76.1920.1057/0.23.1440.877@1440.-76.1920.1057" timestamp="1598868947026" />
+    <state x="2230" y="201" key="run.anything.popup" timestamp="1598868332364">
+      <screen x="1440" y="-76" width="1920" height="1057" />
+    </state>
+    <state x="2230" y="201" key="run.anything.popup/1440.-76.1920.1057/0.23.1440.877@1440.-76.1920.1057" timestamp="1598868332364" />
+    <state x="2230" y="203" width="670" height="676" key="search.everywhere.popup" timestamp="1599116023709">
+      <screen x="1440" y="-76" width="1920" height="1057" />
+    </state>
+    <state x="2230" y="203" width="670" height="676" key="search.everywhere.popup/1440.-76.1920.1057/0.23.1440.877@1440.-76.1920.1057" timestamp="1599116023709" />
+  </component>
+</project>
