@@ -7,6 +7,7 @@ import com.craftless.tutorial.entities.HogEntity;
 import com.craftless.tutorial.init.ModBlocks;
 import com.craftless.tutorial.init.ModEntityTypes;
 import com.craftless.tutorial.init.ModItems;
+import com.craftless.tutorial.init.ModTileEntityTypes;
 import com.craftless.tutorial.items.RawHogMeat;
 
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
@@ -34,6 +35,7 @@ public class Tutorial
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModEntityTypes.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModTileEntityTypes.TILE_ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new WeaponAbilities());

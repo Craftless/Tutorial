@@ -1,6 +1,7 @@
 package com.craftless.tutorial.init;
 
 import com.craftless.tutorial.Tutorial;
+import com.craftless.tutorial.blocks.BlockQuarry;
 import com.craftless.tutorial.blocks.RubyBlock;
 import com.craftless.tutorial.blocks.RubyOre;
 import com.craftless.tutorial.blocks.TestBlock;
@@ -19,5 +20,8 @@ public class ModBlocks
     public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", RubyOre::new);
     public static final RegistryObject<Block> TEST_BLOCK = BLOCKS.register("test_block", TestBlock::new);
 
+    //Tile Entity
+    public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", BlockQuarry::new);
 
+    
 }
