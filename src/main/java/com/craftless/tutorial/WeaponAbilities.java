@@ -10,17 +10,17 @@ import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
-import net.minecraft.world.Explosion;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
-import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 
 public class WeaponAbilities 
 {
-	public HashMap<UUID, Boolean> isDoubleJumping = new HashMap<>();
+	
+	//public HashMap<UUID, Boolean> isDoubleJumping = new HashMap<>();
+	public HashMap<UUID, Long> howLongBeforeCanDoubleJumpAfterJump = new HashMap<>();
 	
 	@SubscribeEvent
 	public void onJump(LivingJumpEvent e)
@@ -28,15 +28,17 @@ public class WeaponAbilities
 		if (e.getEntityLiving() instanceof PlayerEntity)
 		{
 			PlayerEntity player = (PlayerEntity) e.getEntityLiving();
-			if (player.isAirBorne)
-			{
-				if (!isDoubleJumping.containsKey(player.getUniqueID()))
-				player.setMotion(player.getMotion().getX(), player.getMotion().getY() + 5, player.getMotion().getZ() + 3);
-				isDoubleJumping.put(player.getUniqueID(), true);
+			if (howLongBeforeCanDoubleJumpAfterJump.containsKey(player.getUniqueID()) && howLongBeforeCanDoubleJumpAfterJump.get(player.getUniqueID()) > System.currentTimeMillis()) {}
+			else {
+				player.setMotion(player.getMotion().getX(), player.getMotion().getY() + 0.3, player.getMotion().getZ() + 0.3);
+				player.sendMessage(new StringTextComponent("Double Jumped!"), player.getUniqueID());
+				howLongBeforeCanDoubleJumpAfterJump.put(player.getUniqueID(), System.currentTimeMillis() + (3 * 100));
+				//isDoubleJumping.put(player.getUniqueID(), true);
 			}
 		}
 	}
 	
+	/*
 	@SubscribeEvent
 	public void onFall(LivingFallEvent e)
 	{
@@ -45,11 +47,11 @@ public class WeaponAbilities
 			PlayerEntity player = (PlayerEntity) e.getEntityLiving();
 			if (isDoubleJumping.containsKey(player.getUniqueID()))
 			{
-				isDoubleJumping.remove(player.getUniqueID());
+				//isDoubleJumping.remove(player.getUniqueID());
 			}
 		}
 	}
-	
+	*/
 	
 	@SubscribeEvent 
 	public void onHit(AttackEntityEvent e)

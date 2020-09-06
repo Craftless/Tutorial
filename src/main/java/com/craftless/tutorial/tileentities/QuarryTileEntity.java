@@ -23,14 +23,17 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity
 	public int x, y, z, tick;
 	boolean initialized = false;
 	
-	public QuarryTileEntity(final TileEntityType<?> tileEntityTypeIn) {
+	public QuarryTileEntity(final TileEntityType<?> tileEntityTypeIn) 
+	{
 		super(tileEntityTypeIn);
 	}
+	
 	public QuarryTileEntity()
 	{
 		this(ModTileEntityTypes.QUARRY.get());
 	}
 	
+
 	@Override
 	public void tick() {
 		if (!initialized)

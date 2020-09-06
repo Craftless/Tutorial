@@ -21,10 +21,11 @@ public class ClientEventBusSubscriber
 	{
 		RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.HOG.get(), HogRenderer::new);
 	}
-	
+	/*
 	@SubscribeEvent
 	public static void onRegisterEntities(final RegistryEvent.Register<EntityType<?>> event)
 	{
 		ModSpawnEggItem.initSpawnEggs();
 	}
+	*/
 }

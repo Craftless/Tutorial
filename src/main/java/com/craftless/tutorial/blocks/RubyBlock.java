@@ -16,6 +16,7 @@ public class RubyBlock extends Block
 				.harvestLevel(2)
 				.harvestTool(ToolType.PICKAXE)
 				.setRequiresTool());
+		
 	}
 	
 	

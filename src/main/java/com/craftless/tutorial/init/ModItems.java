@@ -56,5 +56,11 @@ public class ModItems
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(ModBlocks.RUBY_BLOCK.get()));
     public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase(ModBlocks.RUBY_ORE.get()));
     public static final RegistryObject<Item> TEST_BLOCK_ITEM = ITEMS.register("test_block", () -> new BlockItemBase(ModBlocks.TEST_BLOCK.get()));
+    public static final RegistryObject<Item> QUARRY = ITEMS.register("quarry", () -> new BlockItemBase(ModBlocks.QUARRY.get()));
+    
+    public static final RegistryObject<Item> RUBY_STAIRS_ITEM = ITEMS.register("ruby_stairs", () -> new BlockItemBase(ModBlocks.RUBY_STAIRS.get()));
+    public static final RegistryObject<Item> RUBY_FENCE_ITEM = ITEMS.register("ruby_fence", () -> new BlockItemBase(ModBlocks.RUBY_FENCE.get()));
+    public static final RegistryObject<Item> RUBY_BUTTON_ITEM = ITEMS.register("ruby_button", () -> new BlockItemBase(ModBlocks.RUBY_BUTTON.get()));
+    public static final RegistryObject<Item> RUBY_PRESSURE_PLATE_ITEM = ITEMS.register("ruby_pressure_plate", () -> new BlockItemBase(ModBlocks.RUBY_PRESSURE_PLATE.get()));
 
 }

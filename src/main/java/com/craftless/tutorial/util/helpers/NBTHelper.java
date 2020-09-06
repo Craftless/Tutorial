@@ -20,7 +20,7 @@ public class NBTHelper {
 		}
 		if (o instanceof QuarryTileEntity)
 		{
-			return writeQuarry((QuarryTileEntity) o;
+			return writeQuarry((QuarryTileEntity) o);
 		}
 		
 		return null;
@@ -30,7 +30,7 @@ public class NBTHelper {
 		CompoundNBT nbt = new CompoundNBT();
 		nbt.putInt("count", i.getCount());
 		nbt.putString("item", i.getItem().getRegistryName().toString());
-		nbt.putByte("type", (byte)i);
+		nbt.putByte("type", (byte)0);
 		return null;
 	}
 
