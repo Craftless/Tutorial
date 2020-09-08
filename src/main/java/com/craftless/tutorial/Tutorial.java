@@ -39,7 +39,6 @@ public class Tutorial
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);        
-        MinecraftForge.EVENT_BUS.register(new ClientEventBusSubscriber());
 
 
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -51,7 +50,7 @@ public class Tutorial
 
 
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(new WeaponAbilities());
+        MinecraftForge.EVENT_BUS.register(new ClientEventBusSubscriber());
         MinecraftForge.EVENT_BUS.register(new RawHogMeat());
 
     }

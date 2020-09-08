@@ -1,7 +1,7 @@
 package com.craftless.tutorial.world.biomes;
 
 import com.craftless.tutorial.init.ModBlocks;
-import com.craftless.tutorial.init.ModEntityTypes;
+import com.craftless.tutorial.world.feature.RubyTree;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
@@ -11,8 +11,12 @@ import net.minecraft.world.biome.BiomeAmbience;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage.Carving;
+import net.minecraft.world.gen.GenerationStage.Decoration;
 import net.minecraft.world.gen.carver.WorldCarver;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
+import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
+import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 
@@ -35,13 +39,14 @@ public class RubyBiome extends Biome
 								Blocks.COARSE_DIRT.getDefaultState(), 
 								ModBlocks.RUBY_ORE.get().getDefaultState(), 
 								Blocks.BRAIN_CORAL.getDefaultState())));
-		
+				
 		
 		addCarver(Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.14285715f)));
 		addCarver(Carving.AIR, Biome.createCarver(WorldCarver.CANYON, new ProbabilityConfig(0.2f)));
 		DefaultBiomeFeatures.addBambooJungleVegetation(this);
 		DefaultBiomeFeatures.addExtraEmeraldOre(this);
 		DefaultBiomeFeatures.addOres(this);
+		this.addFeature(Decoration.VEGETAL_DECORATION, Feature.field_236291_c_.withConfiguration(RubyTree.RUBY_TREE_CONFIG).withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(7, 0.1f, 1))));
 		
 		addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.PIG, 8, 3, 5));
 		for (SpawnListEntry entry : Biomes.PLAINS.getSpawns(EntityClassification.CREATURE))

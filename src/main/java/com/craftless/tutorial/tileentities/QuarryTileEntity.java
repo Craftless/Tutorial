@@ -114,10 +114,9 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity
 			initialized = true;
 			return;
 		}
-		else
-		{
-			init();
-		}
+		
+		init();
+		
 	}
 	
 }

@@ -5,13 +5,19 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2020-09-05 21:48:27 +0800"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/smoker": {
     "criteria": {
       "has_furnace": "2020-09-05 21:51:49 +0800"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/oak_boat": {
+  "minecraft:recipes/transportation/dark_oak_boat": {
     "criteria": {
       "in_water": "2020-09-05 21:48:27 +0800"
     },
@@ -23,7 +29,7 @@
     },
     "done": true
   },
-  "minecraft:recipes/transportation/dark_oak_boat": {
+  "minecraft:recipes/transportation/birch_boat": {
     "criteria": {
       "in_water": "2020-09-05 21:48:27 +0800"
     },
@@ -32,12 +38,6 @@
   "minecraft:recipes/decorations/chest": {
     "criteria": {
       "has_lots_of_items": "2020-09-05 21:52:41 +0800"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/birch_boat": {
-    "criteria": {
-      "in_water": "2020-09-05 21:48:27 +0800"
     },
     "done": true
   },

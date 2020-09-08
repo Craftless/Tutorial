@@ -1,28 +1,38 @@
 {
   "item.tutorial.ruby": "Ruby",
-  "block.tutorial.ruby_block": "Block of Ruby",
-  "block.tutorial.quarry": "Quarry",
-  "item.tutorial.quarry": "Quarry Item",
-  "itemGroup.tutorialTab": "Tutorial",
+  "item.tutorial.hog_spawn_egg": "Hog Spawn Egg",
+  "item.tutorial.raw_hog_meat": "Raw Hog Meat",
+  "item.tutorial.cooked_hog_meat": "Cooked Hog Meat",
+  "item.tutorial.hog_hide": "Hog Hide",
+  "item.tutorial.poison_apple": "Poison Apple",
+  "item.tutorial.explosive_stick": "Explosive Stick",
+  
   "item.tutorial.ruby_sword": "Ruby Sword",
-  "item.tutorial.test_block": "Test Block",
   "item.tutorial.ruby_pickaxe": "Ruby Pickaxe",
   "item.tutorial.ruby_shovel": "Ruby Shovel",
   "item.tutorial.ruby_axe": "Ruby Axe",
   "item.tutorial.ruby_hoe": "Ruby Hoe",
+
   "item.tutorial.ruby_helmet": "Ruby Helmet",
   "item.tutorial.ruby_chestplate": "Ruby Chestplate",
   "item.tutorial.ruby_leggings": "Ruby Leggings",
   "item.tutorial.ruby_boots": "Ruby Boots",
-  "item.tutorial.poison_apple": "Poison Apple",
-  "item.tutorial.ruby_ore": "Ruby Ore",
+
+  "block.tutorial.ruby_chest": "Ruby Chest",
+  "block.tutorial.quarry": "Quarry",
+  "block.tutorial.test_block": "Test Block",
+  "block.tutorial.ruby_ore": "Ruby Ore",
+  "block.tutorial.ruby_block": "Block of Ruby",
+  "block.tutorial.ruby_log": "Ruby Log",
+  "block.tutorial.ruby_sapling": "Ruby Sapling",
+  "block.tutorial.ruby_leaves": "Ruby Leaves",
+  "block.tutorial.ruby_planks": "Ruby Planks",
+
   "entity.tutorial.hog": "Hog",
-  "item.tutorial.hog_spawn_egg": "Hog Spawn Egg",
-  "item.tutorial.raw_hog_meat": "Raw Hog Meat",
-  "item.tutorial.cooked_hog_meat": "Cooked Hog Meat",
-  "item.tutorial.hog_hide": "Hog Hide"
 
+  "container.tutorial.ruby_chest": "Ruby Chest",
 
+  "itemGroup.tutorialTab": "Tutorial"
 
 
 }

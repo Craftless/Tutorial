@@ -19,9 +19,9 @@ bobView:true
 toggleCrouch:false
 toggleSprint:false
 mouseSensitivity:0.5
-fov:0.0
-gamma:0.0
-renderDistance:4
+fov:1.0
+gamma:1.0
+renderDistance:6
 entityDistanceScaling:1.0
 guiScale:0
 particles:2
@@ -31,8 +31,8 @@ graphicsMode:0
 ao:0
 biomeBlendRadius:2
 renderClouds:false
-resourcePacks:[]
-incompatibleResourcePacks:[]
+resourcePacks:["vanilla","mod_resources"]
+incompatibleResourcePacks:["vanilla"]
 lastServer:
 lang:en_us
 chatVisibility:0
@@ -75,7 +75,7 @@ key_key.drop:key.keyboard.q
 key_key.inventory:key.keyboard.e
 key_key.chat:key.keyboard.t
 key_key.playerlist:key.keyboard.tab
-key_key.pickItem:key.mouse.middle
+key_key.pickItem:key.keyboard.8
 key_key.command:key.keyboard.slash
 key_key.screenshot:key.keyboard.f2
 key_key.togglePerspective:key.keyboard.f5
@@ -93,7 +93,7 @@ key_key.hotbar.4:key.keyboard.4
 key_key.hotbar.5:key.keyboard.5
 key_key.hotbar.6:key.keyboard.6
 key_key.hotbar.7:key.keyboard.7
-key_key.hotbar.8:key.keyboard.8
+key_key.hotbar.8:key.mouse.middle
 key_key.hotbar.9:key.keyboard.9
 soundCategory_master:1.0
 soundCategory_music:1.0
