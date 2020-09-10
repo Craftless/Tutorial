@@ -17,7 +17,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class RubyChestScreen extends ContainerScreen<RubyChestContainer> 
 {
 
-	private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation(Tutorial.MOD_ID, "texture/gui/ruby_chest.png");
+	private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation(Tutorial.MOD_ID, "textures/gui/ruby_chest.png");
 	
 	public RubyChestScreen(RubyChestContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
 		super(screenContainer, inv, titleIn);

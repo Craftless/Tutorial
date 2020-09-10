@@ -2,6 +2,7 @@ package com.craftless.tutorial.entities;
 
 import com.craftless.tutorial.init.ModEntityTypes;
 import com.craftless.tutorial.init.ModItems;
+import com.craftless.tutorial.init.ModSounds;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.AgeableEntity;
@@ -115,6 +116,12 @@ public class HogEntity extends AnimalEntity
 		}
 	}
 	
-	
+	@Override
+	public void playAmbientSound() {
+		SoundEvent soundevent = ModSounds.AMBIENT.get();
+		if (soundevent != null) {
+		   this.playSound(soundevent, this.getSoundVolume(), this.getSoundPitch());
+		}
+	}
 	
 }

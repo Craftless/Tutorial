@@ -35,7 +35,7 @@
                   "function": "minecraft:set_count",
                   "count": {
                     "min": 1,
-                    "max": 9,
+                    "max": 1,
                     "type": "minecraft:uniform"
                   }
                 },
@@ -44,13 +44,13 @@
                   "enchantment": "minecraft:fortune",
                   "formula": "minecraft:uniform_bonus_count",
                   "parameters": {
-                    "bonusMultiplier": 2
+                    "bonusMultiplier": 1
                   }
                 }
                 
                 
               ],
-              "name": "tutorial:ruby"
+              "name": "tutorial:ruby_block"
             }
           ]
         }
