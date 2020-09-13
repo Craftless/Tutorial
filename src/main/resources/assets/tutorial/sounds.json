@@ -1,6 +1,12 @@
 {
   "entity.hog.ambient": {
-    "category": "entity"
-    "subtitle": ""
+    "category": "entity",
+    "subtitle": "entity.hog.ambient",
+    "sounds": [
+      {
+        "name": "tutorial:entity/entity.hog.ambient",
+        "stream": true
+      }
+    ]
   }
 }

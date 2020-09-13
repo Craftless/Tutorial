@@ -1,7 +1,6 @@
 package com.craftless.tutorial.init;
 
 import com.craftless.tutorial.Tutorial;
-import com.craftless.tutorial.blocks.BlockItemBase;
 import com.craftless.tutorial.items.CookedHogMeat;
 import com.craftless.tutorial.items.CustomFuel;
 import com.craftless.tutorial.items.ExplosiveStick;
@@ -15,9 +14,12 @@ import com.craftless.tutorial.util.enums.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Food;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
@@ -27,7 +29,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModItems
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Tutorial.MOD_ID);
-
+    
+    
     //Items
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
     public static final RegistryObject<PoisonApple> POISON_APPLE = ITEMS.register("poison_apple", PoisonApple::new);
@@ -52,6 +55,9 @@ public class ModItems
     public static final RegistryObject<ArmorItem> RUBY_LEGGINS = ITEMS.register("ruby_leggings", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(Tutorial.TAB)));
 
+    public static final RegistryObject<Item> RUBY_SEEDS = ITEMS.register("ruby_seeds", () -> new BlockItem(ModBlocks.RUBY_CROP.get(), new Item.Properties().group(Tutorial.TAB).isBurnable().rarity(Rarity.UNCOMMON).food(new Food.Builder().fastToEat().hunger(1).saturation(1).build()).setNoRepair()));
+    
+    /*
     //Block Items
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(ModBlocks.RUBY_BLOCK.get()));
     public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase(ModBlocks.RUBY_ORE.get()));
@@ -62,5 +68,8 @@ public class ModItems
     public static final RegistryObject<Item> RUBY_FENCE_ITEM = ITEMS.register("ruby_fence", () -> new BlockItemBase(ModBlocks.RUBY_FENCE.get()));
     public static final RegistryObject<Item> RUBY_BUTTON_ITEM = ITEMS.register("ruby_button", () -> new BlockItemBase(ModBlocks.RUBY_BUTTON.get()));
     public static final RegistryObject<Item> RUBY_PRESSURE_PLATE_ITEM = ITEMS.register("ruby_pressure_plate", () -> new BlockItemBase(ModBlocks.RUBY_PRESSURE_PLATE.get()));
+    */
 
+    
+    
 }

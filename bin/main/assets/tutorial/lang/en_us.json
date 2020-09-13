@@ -5,6 +5,7 @@
   "item.tutorial.cooked_hog_meat": "Cooked Hog Meat",
   "item.tutorial.hog_hide": "Hog Hide",
   "item.tutorial.poison_apple": "Poison Apple",
+  "item.tutorial.explosive_stick": "Explosive Stick",
   
   "item.tutorial.ruby_sword": "Ruby Sword",
   "item.tutorial.ruby_pickaxe": "Ruby Pickaxe",
@@ -26,6 +27,7 @@
   "block.tutorial.ruby_sapling": "Ruby Sapling",
   "block.tutorial.ruby_leaves": "Ruby Leaves",
   "block.tutorial.ruby_planks": "Ruby Planks",
+  "block.tutorial.ruby_slab": "Ruby Slab",
 
   "entity.tutorial.hog": "Hog",
 

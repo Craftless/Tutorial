@@ -38,6 +38,8 @@ public class ClientEventBusSubscriber
 		RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.HOG.get(), HogRenderer::new);
 		ScreenManager.registerFactory(ModContainerTypes.RUBY_CHEST.get(), RubyChestScreen::new);
 		RenderTypeLookup.setRenderLayer(ModBlocks.RUBY_SAPLING.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(ModBlocks.RUBY_CROP.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(ModBlocks.RUBY_DOOR.get(), RenderType.getCutout());
 	}
 	/*
 	@SubscribeEvent

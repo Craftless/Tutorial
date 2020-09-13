@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tutorial:items/ruby_seeds0",
+    "layer1": "tutorial:items/ruby_seeds1"
+  }
+}
