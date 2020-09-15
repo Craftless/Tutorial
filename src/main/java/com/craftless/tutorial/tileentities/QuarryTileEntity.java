@@ -64,23 +64,25 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity
 	{
 		int index = 0;
 		Block[] blocksRemoved = new Block[9];
-		for (int x = 0; x < 9/*blocksRemoved.length*/; x++)
+		for (int x = 0; x < 5/*blocksRemoved.length*/; x++)
 		{
-			for (int z = 0; z < 9/*blocksRemoved.length*/; z++)
+			for (int z = 0; z < 5/*blocksRemoved.length*/; z++)
 			{
 				BlockPos posToBreak = new BlockPos(this.x + x, this.y, this.z + z);
 				blocksRemoved[index] = this.world.getBlockState(posToBreak).getBlock();
 				destroyBlock(posToBreak, true, null);
+				/*
 				if(thing > 5)
 				{
 					world.setBlockState(posToBreak, Blocks.GLOWSTONE.getDefaultState());
 					thing = 0;
 				}
+				*/
 				index++;
 			}
 		}
 		this.y--;
-		thing++;
+		//thing++;
 	}
 	
 	private boolean destroyBlock(BlockPos pos, boolean dropBlock, @Nullable Entity entity) 

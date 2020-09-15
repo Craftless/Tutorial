@@ -407,3 +407,198 @@ java.lang.IllegalArgumentException: Can't find block minecraft:ruby_slab
 [15Sep2020 20:30:36.559] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 94%
 [15Sep2020 20:30:37.000] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 94%
 [15Sep2020 20:30:37.614] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 94%
+[15Sep2020 20:30:38.302] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 94%
+[15Sep2020 20:30:38.778] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 94%
+[15Sep2020 20:30:39.137] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 94%
+[15Sep2020 20:30:39.847] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 94%
+[15Sep2020 20:30:40.047] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 94%
+[15Sep2020 20:30:40.525] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 95%
+[15Sep2020 20:30:41.112] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 95%
+[15Sep2020 20:30:41.578] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 95%
+[15Sep2020 20:30:42.065] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 95%
+[15Sep2020 20:30:42.841] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 95%
+[15Sep2020 20:30:43.398] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 96%
+[15Sep2020 20:30:43.624] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 96%
+[15Sep2020 20:30:44.384] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 96%
+[15Sep2020 20:30:44.664] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 96%
+[15Sep2020 20:30:45.158] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 97%
+[15Sep2020 20:30:45.568] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 97%
+[15Sep2020 20:30:46.072] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 97%
+[15Sep2020 20:30:46.826] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 98%
+[15Sep2020 20:30:47.055] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 98%
+[15Sep2020 20:30:47.552] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 98%
+[15Sep2020 20:30:48.330] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 98%
+[15Sep2020 20:30:48.511] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 98%
+[15Sep2020 20:30:49.082] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 99%
+[15Sep2020 20:30:49.538] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 99%
+[15Sep2020 20:30:50.167] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 99%
+[15Sep2020 20:30:51.020] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 99%
+[15Sep2020 20:30:51.020] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 99%
+[15Sep2020 20:30:51.021] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 104023 ms
+[15Sep2020 20:31:02.178] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 5, from 10
+[15Sep2020 20:31:02.456] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 10112ms or 202 ticks behind
+[15Sep2020 20:31:25.764] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
+[15Sep2020 20:31:27.761] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@947bfd9
+[15Sep2020 20:31:28.862] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:5e2bb0df] logged in with entity id 178 at (227.4157645044351, 68.86045477989016, -13.343959040429576)
+[15Sep2020 20:31:29.514] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[15Sep2020 20:31:36.452] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[15Sep2020 20:31:37.090] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[15Sep2020 20:31:40.871] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 135 advancements
+[15Sep2020 20:31:58.419] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[15Sep2020 20:31:58.434] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[15Sep2020 20:31:59.241] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 41798ms or 835 ticks behind
+[15Sep2020 20:32:31.693] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2049ms or 40 ticks behind
+[15Sep2020 20:32:55.480] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[15Sep2020 20:32:55.484] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[15Sep2020 20:32:55.535] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
+[15Sep2020 20:32:55.537] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[15Sep2020 20:32:55.593] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
+[15Sep2020 20:32:55.594] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[15Sep2020 20:32:55.594] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[15Sep2020 20:32:57.275] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (5)): All chunks are saved
+[15Sep2020 20:32:57.276] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[15Sep2020 20:32:57.299] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[15Sep2020 20:32:57.299] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[15Sep2020 20:32:57.305] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[15Sep2020 20:32:57.450] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (5)): All chunks are saved
+[15Sep2020 20:32:57.513] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[15Sep2020 20:32:57.520] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[15Sep2020 20:33:04.656] [Render thread/FATAL] [net.minecraft.client.Minecraft/]: Reported exception thrown!
+net.minecraft.crash.ReportedException: Ticking block entity
+	at net.minecraft.world.World.tickBlockEntities(World.java:595) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?]
+	at net.minecraft.client.world.ClientWorld.tickEntities(ClientWorld.java:180) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1503) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:953) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:586) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:55) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-5.1.2.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-5.1.2.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-5.1.2.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-5.1.2.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-5.1.2.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:105) [forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?]
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 9 out of bounds for length 9
+	at com.craftless.tutorial.tileentities.QuarryTileEntity.execute(QuarryTileEntity.java:72) ~[main/:?]
+	at com.craftless.tutorial.tileentities.QuarryTileEntity.tick(QuarryTileEntity.java:49) ~[main/:?]
+	at net.minecraft.world.World.tickBlockEntities(World.java:580) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?]
+	... 16 more
+[15Sep2020 20:33:04.736] [Render thread/INFO] [STDOUT/]: [net.minecraft.util.registry.Bootstrap:printToSYSOUT:127]: ---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 15/9/20, 8:33 pm
+Description: Ticking block entity
+
+java.lang.ArrayIndexOutOfBoundsException: Index 9 out of bounds for length 9
+	at com.craftless.tutorial.tileentities.QuarryTileEntity.execute(QuarryTileEntity.java:72) ~[main/:?] {re:classloading}
+	at com.craftless.tutorial.tileentities.QuarryTileEntity.tick(QuarryTileEntity.java:49) ~[main/:?] {re:classloading}
+	at net.minecraft.world.World.tickBlockEntities(World.java:580) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.world.ClientWorld.tickEntities(ClientWorld.java:180) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1503) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:953) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:586) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:564) ~[?:?] {}
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:55) ~[forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-5.1.2.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-5.1.2.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-5.1.2.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-5.1.2.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-5.1.2.jar:?] {}
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:105) [forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at com.craftless.tutorial.tileentities.QuarryTileEntity.execute(QuarryTileEntity.java:72)
+	at com.craftless.tutorial.tileentities.QuarryTileEntity.tick(QuarryTileEntity.java:49)
+
+-- Block entity being ticked --
+Details:
+	Name: tutorial:quarry // com.craftless.tutorial.tileentities.QuarryTileEntity
+	Block: Block{tutorial:quarry}
+	Block location: World: (228,67,-9), Chunk: (at 4,4,7 in 14,-1; contains blocks 224,0,-16 to 239,255,-1), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Block: Block{tutorial:quarry}
+	Block location: World: (228,67,-9), Chunk: (at 4,4,7 in 14,-1; contains blocks 224,0,-16 to 239,255,-1), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+Stacktrace:
+	at net.minecraft.world.World.tickBlockEntities(World.java:580)
+	at net.minecraft.client.world.ClientWorld.tickEntities(ClientWorld.java:180)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ClientPlayerEntity['Dev'/178, l='ClientLevel', x=229.70, y=68.86, z=-10.13]]
+	Chunk stats: Client Chunk Cache: 289, 146
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (64,70,32), Chunk: (at 0,4,0 in 4,2; contains blocks 64,0,32 to 79,255,47), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 50022 game time, 5728 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.fillCrashReport(ClientWorld.java:463)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2038)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:602)
+	at net.minecraft.client.main.Main.main(Main.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:55)
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72)
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81)
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65)
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:105)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.1
+	Minecraft Version ID: 1.16.1
+	Operating System: Mac OS X (x86_64) version 10.15.6
+	Java Version: 14.0.2, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 276682880 bytes (263 MB) / 884998144 bytes (844 MB) up to 2147483648 bytes (2048 MB)
+	CPUs: 4
+	JVM Flags: 1 total; -Xss1M
+	ModLauncher: 5.1.2+70+master.2845bb9
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/eventbus-2.2.0-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/accesstransformers-2.1.3-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 32.0
+	Forge: net.minecraftforge:32.0.63
+	FML Language Providers: 
+		javafml@32.0
+		minecraft@1
+	Mod List: 
+		client-extra.jar Minecraft {minecraft@1.16.1 DONE}
+		forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1-recomp.jar Forge {forge@32.0.63 DONE}
+		main Tutorial Mod {tutorial@1.16.1-1.0.0 DONE}
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.2.1 build 12
+	Backend API: Intel HD Graphics 4000 OpenGL Engine GL version 2.1 INTEL-14.7.8, Intel Inc.
+	GL Caps: Using framebuffer using ARB_framebuffer_object extension
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Resource Packs: vanilla (incompatible), mod_resources
+	Current Language: English (US)
+	CPU: 4x Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz
+[15Sep2020 20:33:04.765] [Render thread/INFO] [STDOUT/]: [net.minecraft.util.registry.Bootstrap:printToSYSOUT:127]: #@!@# Game crashed! Crash report saved to: #@!@# /Users/javiertan/Development/Mods/Tutorial/run/./crash-reports/crash-2020-09-15_20.33.04-client.txt
