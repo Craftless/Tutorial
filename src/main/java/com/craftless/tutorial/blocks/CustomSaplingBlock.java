@@ -21,6 +21,7 @@ import net.minecraftforge.event.ForgeEventFactory;
 
 public class CustomSaplingBlock extends BushBlock implements IGrowable
 {
+
 	public static final IntegerProperty STAGE = BlockStateProperties.STAGE_0_1;
 	protected static final VoxelShape SHAPE = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
 	private final Supplier<Tree> tree;
@@ -73,7 +74,6 @@ public class CustomSaplingBlock extends BushBlock implements IGrowable
 		return (double) worldIn.rand.nextFloat() < 0.45D;
 	}
 
-	
 	@Override
 	protected void fillStateContainer(Builder<Block, BlockState> builder) {
 		builder.add(STAGE);

@@ -64,7 +64,8 @@ public class Tutorial
     }
     
 
-    private void setup(final FMLCommonSetupEvent event) 
+    @SuppressWarnings("deprecation")
+	private void setup(final FMLCommonSetupEvent event) 
     {
     	DeferredWorkQueue.runLater(() -> {
     		GlobalEntityTypeAttributes.put(ModEntityTypes.HOG.get(), HogEntity.setCustomAttributes().create());
@@ -91,21 +92,20 @@ public class Tutorial
 		ModBiomes.RegisterBiomes();
 	}
 	
-	@SubscribeEvent
-	public static void onRegisterItems(final RegistryEvent.Register<Item> e)
-	{
-		final IForgeRegistry<Item> registry = e.getRegistry();
-		
-		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> !(block instanceof CustomCrop))
-			.forEach(block -> {
-				final Item.Properties properties = new Item.Properties().group(Tutorial.TAB);
-				final BlockItem blockItem = new BlockItem(block, properties);
-				blockItem.setRegistryName(block.getRegistryName());
-				registry.register(blockItem);
-		});
-		
-		LOGGER.debug("Registered BlockItems");
-	}
+//	@SubscribeEvent
+//	public static void onRegisterItems(final RegistryEvent.Register<Item> event) 
+//	{
+//		final IForgeRegistry<Item> registry = event.getRegistry();
+//
+//		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> !(block instanceof CustomCrop)).forEach(block -> {
+//					final Item.Properties properties = new Item.Properties().group(Tutorial.TAB);
+//					final BlockItem blockItem = new BlockItem(block, properties);
+//					blockItem.setRegistryName(block.getRegistryName());
+//					registry.register(blockItem);
+//				});
+//
+//		LOGGER.debug("Registered BlockItems!");
+//	}
     
     
     

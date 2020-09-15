@@ -57,6 +57,8 @@ public class ModBlocks
 
     public static final RegistryObject<Block> RUBY_CHEST = BLOCKS.register("ruby_chest", () -> new RubyChestBlock(Block.Properties.from(RUBY_BLOCK.get())));
     
+    
+    
     private static RotatedPillarBlock createLogBlock(MaterialColor topColor, MaterialColor barkColor) {
         return new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD, (p_235431_2_) -> {
            return p_235431_2_.get(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? topColor : barkColor;

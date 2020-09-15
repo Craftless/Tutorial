@@ -20,7 +20,7 @@ import net.minecraft.util.math.BlockPos;
 public class QuarryTileEntity extends TileEntity implements ITickableTileEntity
 {
 
-	public int x, y, z, tick;
+	public int x, y, z, tick, thing;
 	boolean initialized = false;
 	
 	public QuarryTileEntity(final TileEntityType<?> tileEntityTypeIn) 
@@ -58,22 +58,29 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity
 		y = this.pos.getY() - 1;
 		z = this.pos.getZ() - 1;
 		tick = 0;
+		thing = 0;
 	}
 	private void execute()
 	{
 		int index = 0;
 		Block[] blocksRemoved = new Block[9];
-		for (int x = 0; x < blocksRemoved.length; x++)
+		for (int x = 0; x < 9/*blocksRemoved.length*/; x++)
 		{
-			for (int z = 0; z < blocksRemoved.length; z++)
+			for (int z = 0; z < 9/*blocksRemoved.length*/; z++)
 			{
 				BlockPos posToBreak = new BlockPos(this.x + x, this.y, this.z + z);
 				blocksRemoved[index] = this.world.getBlockState(posToBreak).getBlock();
 				destroyBlock(posToBreak, true, null);
+				if(thing > 5)
+				{
+					world.setBlockState(posToBreak, Blocks.GLOWSTONE.getDefaultState());
+					thing = 0;
+				}
 				index++;
 			}
 		}
-		
+		this.y--;
+		thing++;
 	}
 	
 	private boolean destroyBlock(BlockPos pos, boolean dropBlock, @Nullable Entity entity) 

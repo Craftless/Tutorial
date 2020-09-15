@@ -1,6 +1,11 @@
 package com.craftless.tutorial.init;
 
 import com.craftless.tutorial.Tutorial;
+import com.craftless.tutorial.blocks.BlockItemBase;
+import com.craftless.tutorial.blocks.CustomCrop;
+import com.craftless.tutorial.blocks.CustomDoor;
+import com.craftless.tutorial.blocks.CustomSaplingBlock;
+import com.craftless.tutorial.blocks.RubyChestBlock;
 import com.craftless.tutorial.items.CookedHogMeat;
 import com.craftless.tutorial.items.CustomFuel;
 import com.craftless.tutorial.items.ExplosiveStick;
@@ -11,6 +16,11 @@ import com.craftless.tutorial.items.RawHogMeat;
 import com.craftless.tutorial.util.enums.ModArmorMaterial;
 import com.craftless.tutorial.util.enums.ModItemTier;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
@@ -53,23 +63,32 @@ public class ModItems
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<ArmorItem> RUBY_LEGGINS = ITEMS.register("ruby_leggings", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(Tutorial.TAB)));
-    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(Tutorial.TAB)));
-
-    public static final RegistryObject<Item> RUBY_SEEDS = ITEMS.register("ruby_seeds", () -> new BlockItem(ModBlocks.RUBY_CROP.get(), new Item.Properties().group(Tutorial.TAB).isBurnable().rarity(Rarity.UNCOMMON).food(new Food.Builder().fastToEat().hunger(1).saturation(1).build()).setNoRepair()));
+    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(Tutorial.TAB)));    
     
-    /*
     //Block Items
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(ModBlocks.RUBY_BLOCK.get()));
     public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase(ModBlocks.RUBY_ORE.get()));
     public static final RegistryObject<Item> TEST_BLOCK_ITEM = ITEMS.register("test_block", () -> new BlockItemBase(ModBlocks.TEST_BLOCK.get()));
+    
     public static final RegistryObject<Item> QUARRY = ITEMS.register("quarry", () -> new BlockItemBase(ModBlocks.QUARRY.get()));
+    public static final RegistryObject<Item> RUBY_CHEST = ITEMS.register("ruby_chest", () -> new BlockItemBase(ModBlocks.RUBY_CHEST.get()));
+
     
     public static final RegistryObject<Item> RUBY_STAIRS_ITEM = ITEMS.register("ruby_stairs", () -> new BlockItemBase(ModBlocks.RUBY_STAIRS.get()));
     public static final RegistryObject<Item> RUBY_FENCE_ITEM = ITEMS.register("ruby_fence", () -> new BlockItemBase(ModBlocks.RUBY_FENCE.get()));
     public static final RegistryObject<Item> RUBY_BUTTON_ITEM = ITEMS.register("ruby_button", () -> new BlockItemBase(ModBlocks.RUBY_BUTTON.get()));
     public static final RegistryObject<Item> RUBY_PRESSURE_PLATE_ITEM = ITEMS.register("ruby_pressure_plate", () -> new BlockItemBase(ModBlocks.RUBY_PRESSURE_PLATE.get()));
-    */
+    public static final RegistryObject<Item> RUBY_SLAB = ITEMS.register("ruby_slab", () -> new BlockItemBase(ModBlocks.RUBY_SLAB.get()));
+    
+    public static final RegistryObject<Item> RUBY_SEEDS = ITEMS.register("ruby_seeds", () -> new BlockItem(ModBlocks.RUBY_CROP.get(), new Item.Properties().group(Tutorial.TAB).isBurnable().rarity(Rarity.UNCOMMON).food(new Food.Builder().fastToEat().hunger(1).saturation(1).build()).setNoRepair()));
 
+    public static final RegistryObject<Item> RUBY_PLANKS_ITEM = ITEMS.register("ruby_planks", () -> new BlockItemBase(ModBlocks.RUBY_PLANKS.get()));
+    public static final RegistryObject<Item> RUBY_LOG_ITEM = ITEMS.register("ruby_log", () -> new BlockItemBase(ModBlocks.RUBY_LOG.get()));
+    public static final RegistryObject<Item> RUBY_LEAVES_ITEM = ITEMS.register("ruby_leaves", () -> new BlockItemBase(ModBlocks.RUBY_LEAVES.get()));
+    public static final RegistryObject<Item> RUBY_SAPLING_ITEM = ITEMS.register("ruby_sapling", () -> new BlockItemBase(ModBlocks.RUBY_SAPLING.get()));
+    public static final RegistryObject<Item> RUBY_CROP_ITEM = ITEMS.register("ruby_crop", () -> new BlockItemBase(ModBlocks.RUBY_CROP.get()));
+    public static final RegistryObject<Item> RUBY_DOOR_ITEM = ITEMS.register("ruby_door", () -> new BlockItemBase(ModBlocks.RUBY_DOOR.get()));
+    
     
     
 }
