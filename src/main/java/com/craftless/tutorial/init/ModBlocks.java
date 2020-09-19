@@ -5,6 +5,7 @@ import com.craftless.tutorial.blocks.BlockQuarry;
 import com.craftless.tutorial.blocks.CustomCrop;
 import com.craftless.tutorial.blocks.CustomDoor;
 import com.craftless.tutorial.blocks.CustomSaplingBlock;
+import com.craftless.tutorial.blocks.JarBlock;
 import com.craftless.tutorial.blocks.ModButtonBlock;
 import com.craftless.tutorial.blocks.ModPressurePlateBlock;
 import com.craftless.tutorial.blocks.RubyBlock;
@@ -44,19 +45,18 @@ public class ModBlocks
     public static final RegistryObject<Block> RUBY_CROP = BLOCKS.register("ruby_crop", () -> new CustomCrop(Block.Properties.from(Blocks.WHEAT)));
     public static final RegistryObject<Block> RUBY_DOOR = BLOCKS.register("ruby_door", () -> new CustomDoor(Block.Properties.from(Blocks.OAK_DOOR)));
     
-    public static final RegistryObject<Block> RUBY_STAIRS = BLOCKS.register("ruby_stairs", () -> new StairsBlock(() -> RUBY_BLOCK.get().getDefaultState(), Block.Properties.create(ModBlocks.RUBY_PLANKS.get().getDefaultState().getMaterial(), ModBlocks.RUBY_PLANKS.get().getMaterialColor()).hardnessAndResistance(5, 5).harvestLevel(0).setRequiresTool()));
-    public static final RegistryObject<Block> RUBY_FENCE = BLOCKS.register("ruby_fence", () -> new FenceBlock(Block.Properties.create(ModBlocks.RUBY_PLANKS.get().getDefaultState().getMaterial(), ModBlocks.RUBY_PLANKS.get().getMaterialColor()).hardnessAndResistance(5, 5).harvestLevel(0).setRequiresTool()));
-    public static final RegistryObject<Block> RUBY_BUTTON = BLOCKS.register("ruby_button", () -> new ModButtonBlock(Block.Properties.create(ModBlocks.RUBY_PLANKS.get().getDefaultState().getMaterial(), ModBlocks.RUBY_PLANKS.get().getMaterialColor()).hardnessAndResistance(2, 5).harvestLevel(0).setRequiresTool()));
-    public static final RegistryObject<Block> RUBY_PRESSURE_PLATE = BLOCKS.register("ruby_pressure_plate", () -> new ModPressurePlateBlock(Sensitivity.MOBS, Block.Properties.create(ModBlocks.RUBY_BLOCK.get().getDefaultState().getMaterial(), ModBlocks.RUBY_PLANKS.get().getMaterialColor()).hardnessAndResistance(2, 5).harvestLevel(0).setRequiresTool()));
+    public static final RegistryObject<Block> RUBY_STAIRS = BLOCKS.register("ruby_stairs", () -> new StairsBlock(() -> RUBY_BLOCK.get().getDefaultState(), Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
+    public static final RegistryObject<Block> RUBY_FENCE = BLOCKS.register("ruby_fence", () -> new FenceBlock(Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
+    public static final RegistryObject<Block> RUBY_BUTTON = BLOCKS.register("ruby_button", () -> new ModButtonBlock(Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
+    public static final RegistryObject<Block> RUBY_PRESSURE_PLATE = BLOCKS.register("ruby_pressure_plate", () -> new ModPressurePlateBlock(Sensitivity.MOBS, Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
     public static final RegistryObject<Block> RUBY_SLAB = BLOCKS.register("ruby_slab", () -> new SlabBlock(Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
     
     
     
     //Tile Entity
     public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", BlockQuarry::new);
-
     public static final RegistryObject<Block> RUBY_CHEST = BLOCKS.register("ruby_chest", () -> new RubyChestBlock(Block.Properties.from(RUBY_BLOCK.get())));
-    
+    public static final RegistryObject<Block> JAR_BLOCK = BLOCKS.register("jar_block",  JarBlock::new);
     
     
     private static RotatedPillarBlock createLogBlock(MaterialColor topColor, MaterialColor barkColor) {

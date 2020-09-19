@@ -29,7 +29,9 @@ public class CustomSaplingBlock extends BushBlock implements IGrowable
 	public CustomSaplingBlock(Supplier<Tree> treeIn, Properties properties) {
 		super(properties);
 		this.tree = treeIn;
+		
 	}
+	
 
 	@Override
 	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
@@ -44,10 +46,11 @@ public class CustomSaplingBlock extends BushBlock implements IGrowable
 			return;
 		}
 		if (worldIn.getLight(pos.up()) >= 9 && rand.nextInt(7) == 0) {
-			this.grow(worldIn, pos, state, rand);
+			this.placeTree(worldIn, pos, state, rand);
 		}
 	}
 
+	/*
 	public void grow(ServerWorld serverWorld, BlockPos pos, BlockState state, Random rand) {
 		if (state.get(STAGE) == 0) {
 			serverWorld.setBlockState(pos, state.func_235896_a_(STAGE), 4);
@@ -58,10 +61,21 @@ public class CustomSaplingBlock extends BushBlock implements IGrowable
 					rand);
 		}
 	}
+	*/
+	
+	public void placeTree(ServerWorld world, BlockPos pos, BlockState state, Random rand) {
+	      if (state.get(STAGE) == 0) {
+	         world.setBlockState(pos, state.func_235896_a_(STAGE), 4);
+	      } else {
+	         if (!net.minecraftforge.event.ForgeEventFactory.saplingGrowTree(world, rand, pos)) return;
+	         this.tree.get().attemptGrowTree(world, world.getChunkProvider().getChunkGenerator(), pos, state, rand);
+	      }
+
+	   }
 
 	@Override
 	public void grow(ServerWorld serverWorld, Random rand, BlockPos pos, BlockState state) {
-		this.grow(serverWorld, pos, state, rand);
+		this.placeTree(serverWorld, pos, state, rand);
 	}
 
 	@Override

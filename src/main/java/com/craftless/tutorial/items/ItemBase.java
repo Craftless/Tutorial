@@ -12,4 +12,9 @@ public class ItemBase extends Item
 		super(new Item.Properties().group(Tutorial.TAB));
 	}
 	
+	public ItemBase(Properties properties)
+	{
+		super(properties.group(Tutorial.TAB));
+	}
+	
 }

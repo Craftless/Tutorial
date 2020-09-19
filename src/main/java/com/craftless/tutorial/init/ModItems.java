@@ -2,25 +2,17 @@ package com.craftless.tutorial.init;
 
 import com.craftless.tutorial.Tutorial;
 import com.craftless.tutorial.blocks.BlockItemBase;
-import com.craftless.tutorial.blocks.CustomCrop;
-import com.craftless.tutorial.blocks.CustomDoor;
-import com.craftless.tutorial.blocks.CustomSaplingBlock;
-import com.craftless.tutorial.blocks.RubyChestBlock;
 import com.craftless.tutorial.items.CookedHogMeat;
 import com.craftless.tutorial.items.CustomFuel;
 import com.craftless.tutorial.items.ExplosiveStick;
 import com.craftless.tutorial.items.ItemBase;
+import com.craftless.tutorial.items.JarItem;
 import com.craftless.tutorial.items.ModSpawnEggItem;
 import com.craftless.tutorial.items.PoisonApple;
 import com.craftless.tutorial.items.RawHogMeat;
 import com.craftless.tutorial.util.enums.ModArmorMaterial;
 import com.craftless.tutorial.util.enums.ModItemTier;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
@@ -32,6 +24,7 @@ import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
+import net.minecraft.item.Item.Properties;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -49,8 +42,8 @@ public class ModItems
     public static final RegistryObject<ExplosiveStick> EXPLOSIVE_STICK = ITEMS.register("explosive_stick", ExplosiveStick::new);
     public static final RegistryObject<ModSpawnEggItem> HOG_SPAWN_EGG = ITEMS.register("hog_spawn_egg", () -> new ModSpawnEggItem(ModEntityTypes.HOG, 0xF1BF7B, 0x705128, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<CustomFuel> HOG_HIDE = ITEMS.register("hog_hide", () -> new CustomFuel(new Item.Properties().group(Tutorial.TAB), 20 * 50));
-
-    
+    public static final RegistryObject<JarItem> JAR = ITEMS.register("jar", JarItem::new);
+    public static final RegistryObject<Item> CRYSTAL = ITEMS.register("crystal", () -> new ItemBase(new Item.Properties().maxStackSize(4)));
 
     //Tools		base: 4
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(ModItemTier.RUBY, 4, -2.4f, new Item.Properties().group(Tutorial.TAB)));
@@ -72,7 +65,7 @@ public class ModItems
     
     public static final RegistryObject<Item> QUARRY = ITEMS.register("quarry", () -> new BlockItemBase(ModBlocks.QUARRY.get()));
     public static final RegistryObject<Item> RUBY_CHEST = ITEMS.register("ruby_chest", () -> new BlockItemBase(ModBlocks.RUBY_CHEST.get()));
-
+    public static final RegistryObject<Item> JAR_BLOCK = ITEMS.register("jar_block", () -> new BlockItemBase(ModBlocks.JAR_BLOCK.get()));
     
     public static final RegistryObject<Item> RUBY_STAIRS_ITEM = ITEMS.register("ruby_stairs", () -> new BlockItemBase(ModBlocks.RUBY_STAIRS.get()));
     public static final RegistryObject<Item> RUBY_FENCE_ITEM = ITEMS.register("ruby_fence", () -> new BlockItemBase(ModBlocks.RUBY_FENCE.get()));

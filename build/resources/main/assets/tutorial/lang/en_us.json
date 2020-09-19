@@ -6,6 +6,7 @@
   "item.tutorial.hog_hide": "Hog Hide",
   "item.tutorial.poison_apple": "Poison Apple",
   "item.tutorial.explosive_stick": "Explosive Stick",
+  "item.tutorial.jar": "Jar",
   
   "item.tutorial.ruby_sword": "Ruby Sword",
   "item.tutorial.ruby_pickaxe": "Ruby Pickaxe",
@@ -20,6 +21,7 @@
 
   "block.tutorial.ruby_chest": "Ruby Chest",
   "block.tutorial.quarry": "Quarry",
+  "block.tutorial.jar_block": "Jar Block",
   "block.tutorial.test_block": "Test Block",
   "block.tutorial.ruby_ore": "Ruby Ore",
   "block.tutorial.ruby_block": "Block of Ruby",
@@ -32,6 +34,8 @@
   "entity.tutorial.hog": "Hog",
 
   "container.tutorial.ruby_chest": "Ruby Chest",
+  
+  "enchantment.tutorial.upstep": "Upstep",
 
   "itemGroup.tutorialTab": "Tutorial"
 

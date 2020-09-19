@@ -3,11 +3,12 @@ package com.craftless.tutorial;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.craftless.tutorial.blocks.CustomCrop;
+import com.craftless.tutorial.client.ColorHandler;
 import com.craftless.tutorial.entities.HogEntity;
 import com.craftless.tutorial.init.ModBiomes;
 import com.craftless.tutorial.init.ModBlocks;
 import com.craftless.tutorial.init.ModContainerTypes;
+import com.craftless.tutorial.init.ModEnchantments;
 import com.craftless.tutorial.init.ModEntityTypes;
 import com.craftless.tutorial.init.ModItems;
 import com.craftless.tutorial.init.ModSounds;
@@ -16,9 +17,8 @@ import com.craftless.tutorial.items.RawHogMeat;
 import com.craftless.tutorial.util.ClientEventBusSubscriber;
 
 import net.minecraft.block.ComposterBlock;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.Biome;
@@ -26,13 +26,12 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.IForgeRegistry;
 
+@SuppressWarnings("deprecation")
 @Mod("tutorial")
 public class Tutorial 
 {
@@ -46,14 +45,17 @@ public class Tutorial
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);        
-
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(ColorHandler::registerItemColor);
 
         ModSounds.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+        ModEnchantments.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModEntityTypes.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModContainerTypes.CONTAINERS_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        
         ModBiomes.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
 
@@ -73,6 +75,7 @@ public class Tutorial
     	
     	ComposterBlock.registerCompostable(0.4f, ModBlocks.RUBY_SAPLING.get());
     	ComposterBlock.registerCompostable(0.6f, ModBlocks.RUBY_LEAVES.get());
+    	
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {}

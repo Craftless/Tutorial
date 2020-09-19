@@ -12,7 +12,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "minecraft:ruby_slab",
+                  "block": "tutorial:ruby_slab",
                   "properties": {
                     "type": "double"
                   }
