@@ -31,7 +31,7 @@ public class RubyChestScreen extends ContainerScreen<RubyChestContainer>
 	public void render(MatrixStack matrixStack, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(matrixStack);		
 		super.render(matrixStack, mouseX, mouseY, partialTicks);
-		this.renderComponentHoverEffect(matrixStack, Style.EMPTY, mouseX, mouseY);
+	    this.func_230459_a_(matrixStack, mouseX, mouseY);
 	}
 	
 	

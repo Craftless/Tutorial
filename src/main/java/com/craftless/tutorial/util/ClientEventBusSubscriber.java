@@ -4,13 +4,16 @@ import java.util.HashMap;
 import java.util.UUID;
 
 import com.craftless.tutorial.Tutorial;
+import com.craftless.tutorial.client.gui.ItemPedestalScreen;
 import com.craftless.tutorial.client.gui.JarScreen;
 import com.craftless.tutorial.client.gui.RubyChestScreen;
 import com.craftless.tutorial.client.renderer.HogRenderer;
+import com.craftless.tutorial.client.renderer.ItemPedestalRenderer;
 import com.craftless.tutorial.init.ModBlocks;
 import com.craftless.tutorial.init.ModContainerTypes;
 import com.craftless.tutorial.init.ModEntityTypes;
 import com.craftless.tutorial.init.ModItems;
+import com.craftless.tutorial.init.ModTileEntityTypes;
 
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
@@ -27,13 +30,14 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent.PlayerLoggedOutEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -49,6 +53,7 @@ public class ClientEventBusSubscriber
 		RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.HOG.get(), HogRenderer::new);
 		ScreenManager.registerFactory(ModContainerTypes.RUBY_CHEST.get(), RubyChestScreen::new);
 		ScreenManager.registerFactory(ModContainerTypes.JAR.get(), JarScreen::new);
+		ScreenManager.registerFactory(ModContainerTypes.ITEM_PEDESTAL.get(), ItemPedestalScreen::new);
 		RenderTypeLookup.setRenderLayer(ModBlocks.RUBY_SAPLING.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(ModBlocks.RUBY_CROP.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(ModBlocks.RUBY_DOOR.get(), RenderType.getCutout());
@@ -61,6 +66,9 @@ public class ClientEventBusSubscriber
 				return is.isDamaged() ? 0.0F : 1.0F;
 			}
 		});
+		
+		ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.ITEM_PEDESTAL.get()
+				,ItemPedestalRenderer::new);
 	}
 	/*
 	@SubscribeEvent
@@ -110,7 +118,6 @@ public class ClientEventBusSubscriber
 		}
 	}
 	*/
-	public HashMap<UUID, Long> recentlyDealtDamage = new HashMap<>();
 	
 	@SubscribeEvent 
 	public void onHit(AttackEntityEvent e)
@@ -129,10 +136,7 @@ public class ClientEventBusSubscriber
 				}
 					
 			}
-		}
-		
-		recentlyDealtDamage.put(player.getUniqueID(), System.currentTimeMillis() + 10 * 1);
-		
+		}		
 		
 		
 	} 
@@ -140,14 +144,10 @@ public class ClientEventBusSubscriber
 	@SubscribeEvent
 	public void onsfoais(LivingDamageEvent e)
 	{
-		if (!recentlyDealtDamage.isEmpty())
+		if (e.getSource().getTrueSource() instanceof PlayerEntity)
 		{
-			PlayerEntity player = null;
-			for (UUID uuid : (UUID[])recentlyDealtDamage.keySet().toArray())
-			{
-				if (recentlyDealtDamage.get(uuid) >= System.currentTimeMillis())
-					player.sendMessage(new TranslationTextComponent(Float.toString(e.getAmount())), uuid);
-			}
+			PlayerEntity player = (PlayerEntity) e.getSource().getTrueSource();
+			player.sendMessage(new StringTextComponent(Float.toString(e.getAmount())), (UUID)player.getUniqueID());
 		}
 	}
 	
@@ -155,16 +155,20 @@ public class ClientEventBusSubscriber
 	@SubscribeEvent
 	public void onDisconnect(PlayerLoggedOutEvent e)
 	{
-		if (recentlyDealtDamage.containsKey(e.getPlayer().getUniqueID()))
-		{
-			recentlyDealtDamage.remove(e.getPlayer().getUniqueID());
-		}
 		if (howLongBeforeCanDoubleJumpAfterJump.containsKey(e.getPlayer().getUniqueID()))
 		{
 			howLongBeforeCanDoubleJumpAfterJump.remove(e.getPlayer().getUniqueID());
 		}
 	}
 	
+	@SubscribeEvent
+	public void onTeleport(EnderTeleportEvent e)
+	{
+		if (e.getEntityLiving().getHeldItemMainhand().isItemEqualIgnoreDurability(ModItems.ASPECT_OF_THE_END.get().getDefaultInstance()) || e.getEntityLiving().getHeldItemOffhand().isItemEqualIgnoreDurability(ModItems.ASPECT_OF_THE_END.get().getDefaultInstance()))
+		{
+			e.setAttackDamage(1);
+		}
+	}
 	
 	
 }

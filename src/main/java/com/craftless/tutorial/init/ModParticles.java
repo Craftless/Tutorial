@@ -22,7 +22,6 @@ public class ModParticles
 	public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, Tutorial.MOD_ID);
 	
 	public static final RegistryObject<ParticleType<ColouredParticleData>> COLOURED_PARTICLE = PARTICLE_TYPES.register("coloured_particle", () -> new ColouredParticleData(false, ColouredParticleData.DESERIALIZER));
-	public static final RegistryObject<BasicParticleType> SOEOAJK_PARTICLE = PARTICLE_TYPES.register("hello", () -> new BasicParticleType(false));
 	
 	@SuppressWarnings("resource")
 	@SubscribeEvent

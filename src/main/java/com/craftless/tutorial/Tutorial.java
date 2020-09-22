@@ -10,7 +10,9 @@ import com.craftless.tutorial.init.ModBlocks;
 import com.craftless.tutorial.init.ModContainerTypes;
 import com.craftless.tutorial.init.ModEnchantments;
 import com.craftless.tutorial.init.ModEntityTypes;
+import com.craftless.tutorial.init.ModFluids;
 import com.craftless.tutorial.init.ModItems;
+import com.craftless.tutorial.init.ModParticles;
 import com.craftless.tutorial.init.ModSounds;
 import com.craftless.tutorial.init.ModTileEntityTypes;
 import com.craftless.tutorial.items.RawHogMeat;
@@ -51,10 +53,12 @@ public class Tutorial
 
         ModEnchantments.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModFluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModEntityTypes.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModContainerTypes.CONTAINERS_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModParticles.PARTICLE_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         
         ModBiomes.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
 

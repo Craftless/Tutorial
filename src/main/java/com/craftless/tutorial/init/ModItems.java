@@ -4,6 +4,7 @@ import com.craftless.tutorial.Tutorial;
 import com.craftless.tutorial.blocks.BlockItemBase;
 import com.craftless.tutorial.items.CookedHogMeat;
 import com.craftless.tutorial.items.CustomFuel;
+import com.craftless.tutorial.items.Dorito;
 import com.craftless.tutorial.items.ExplosiveStick;
 import com.craftless.tutorial.items.ItemBase;
 import com.craftless.tutorial.items.JarItem;
@@ -24,7 +25,6 @@ import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
-import net.minecraft.item.Item.Properties;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -44,7 +44,8 @@ public class ModItems
     public static final RegistryObject<CustomFuel> HOG_HIDE = ITEMS.register("hog_hide", () -> new CustomFuel(new Item.Properties().group(Tutorial.TAB), 20 * 50));
     public static final RegistryObject<JarItem> JAR = ITEMS.register("jar", JarItem::new);
     public static final RegistryObject<Item> CRYSTAL = ITEMS.register("crystal", () -> new ItemBase(new Item.Properties().maxStackSize(4)));
-
+    public static final RegistryObject<Item> DORITO = ITEMS.register("dorito", Dorito::new);
+    
     //Tools		base: 4
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(ModItemTier.RUBY, 4, -2.4f, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<PickaxeItem> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe", () -> new PickaxeItem(ModItemTier.RUBY, 0, -2.8f, new Item.Properties().group(Tutorial.TAB)));
@@ -52,6 +53,8 @@ public class ModItems
     public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register("ruby_axe", () -> new AxeItem(ModItemTier.RUBY, 5, -3.1f, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe", () -> new HoeItem(ModItemTier.RUBY, -3, -1.0f, new Item.Properties().group(Tutorial.TAB)));
 
+    public static final RegistryObject<SwordItem> ASPECT_OF_THE_END = ITEMS.register("aspect_of_the_end", () -> new SwordItem(ModItemTier.RUBY, 4, -2.4f, new Item.Properties().group(Tutorial.TAB)));
+    
     //Armor
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(Tutorial.TAB)));
@@ -82,6 +85,6 @@ public class ModItems
     public static final RegistryObject<Item> RUBY_CROP_ITEM = ITEMS.register("ruby_crop", () -> new BlockItemBase(ModBlocks.RUBY_CROP.get()));
     public static final RegistryObject<Item> RUBY_DOOR_ITEM = ITEMS.register("ruby_door", () -> new BlockItemBase(ModBlocks.RUBY_DOOR.get()));
     
-    
+    public static final RegistryObject<Item> ITEM_PEDESTAL_ITEM = ITEMS.register("item_pedestal", () -> new BlockItemBase(ModBlocks.ITEM_PEDESTAL.get()));
     
 }

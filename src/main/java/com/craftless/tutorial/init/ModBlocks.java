@@ -5,6 +5,7 @@ import com.craftless.tutorial.blocks.BlockQuarry;
 import com.craftless.tutorial.blocks.CustomCrop;
 import com.craftless.tutorial.blocks.CustomDoor;
 import com.craftless.tutorial.blocks.CustomSaplingBlock;
+import com.craftless.tutorial.blocks.ItemPedestalBlock;
 import com.craftless.tutorial.blocks.JarBlock;
 import com.craftless.tutorial.blocks.ModButtonBlock;
 import com.craftless.tutorial.blocks.ModPressurePlateBlock;
@@ -57,7 +58,7 @@ public class ModBlocks
     public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", BlockQuarry::new);
     public static final RegistryObject<Block> RUBY_CHEST = BLOCKS.register("ruby_chest", () -> new RubyChestBlock(Block.Properties.from(RUBY_BLOCK.get())));
     public static final RegistryObject<Block> JAR_BLOCK = BLOCKS.register("jar_block",  JarBlock::new);
-    
+    public static final RegistryObject<Block> ITEM_PEDESTAL = BLOCKS.register("item_pedestal", () -> new ItemPedestalBlock(Block.Properties.from(Blocks.ANVIL)));
     
     private static RotatedPillarBlock createLogBlock(MaterialColor topColor, MaterialColor barkColor) {
         return new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD, (p_235431_2_) -> {

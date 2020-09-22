@@ -58,12 +58,17 @@ public class ColouredParticle extends SpriteTexturedParticle
 		}
 		else
 		{
-			float f = (float) this.age / (float) this.maxAge;
-			float f1 = -f + f * f * 2.0F;
-			float f2 = 1.0F - f1;
-			this.posX = this.posX + this.motionX * (double) f2;
-			this.posY = this.posY + this.motionY * (double) f2 + (double) (0.2F - f);
-			this.posZ = this.posZ + this.motionZ * (double) f2;
+			this.move(this.motionX, this.motionY, this.motionZ);
+	         this.particleGreen = (float)((double)this.particleGreen * 0.96D);
+	         this.particleBlue = (float)((double)this.particleBlue * 0.9D);
+	         this.motionX *= (double)0.7F;
+	         this.motionY *= (double)0.7F;
+	         this.motionZ *= (double)0.7F;
+	         this.motionY -= (double)0.02F;
+	         if (this.onGround) {
+	            this.motionX *= (double)0.7F;
+	            this.motionZ *= (double)0.7F;
+	         }
 		}
 	}
 	

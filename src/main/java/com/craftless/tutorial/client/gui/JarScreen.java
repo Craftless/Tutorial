@@ -39,7 +39,7 @@ public class JarScreen extends ContainerScreen<JarContainer>
 	@Override
 	public void render(MatrixStack matrixStack, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(matrixStack);
-		this.renderComponentHoverEffect(matrixStack, Style.EMPTY, mouseX, mouseY);
+	    this.func_230459_a_(matrixStack, mouseX, mouseY);
 		super.render(matrixStack, mouseX, mouseY, partialTicks);
 	}
 
