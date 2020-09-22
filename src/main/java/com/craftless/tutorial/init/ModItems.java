@@ -8,6 +8,7 @@ import com.craftless.tutorial.items.Dorito;
 import com.craftless.tutorial.items.ExplosiveStick;
 import com.craftless.tutorial.items.ItemBase;
 import com.craftless.tutorial.items.JarItem;
+import com.craftless.tutorial.items.ModMusicDiscItem;
 import com.craftless.tutorial.items.ModSpawnEggItem;
 import com.craftless.tutorial.items.PoisonApple;
 import com.craftless.tutorial.items.RawHogMeat;
@@ -25,6 +26,7 @@ import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
+import net.minecraft.item.Item.Properties;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -45,6 +47,7 @@ public class ModItems
     public static final RegistryObject<JarItem> JAR = ITEMS.register("jar", JarItem::new);
     public static final RegistryObject<Item> CRYSTAL = ITEMS.register("crystal", () -> new ItemBase(new Item.Properties().maxStackSize(4)));
     public static final RegistryObject<Item> DORITO = ITEMS.register("dorito", Dorito::new);
+    public static final RegistryObject<Item> DON_DISC = ITEMS.register("music_disc_don", () -> new ModMusicDiscItem(5, () -> ModSounds.LAZY_DON.get(), new Item.Properties().group(Tutorial.TAB).maxStackSize(1).rarity(Rarity.RARE)));
     
     //Tools		base: 4
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(ModItemTier.RUBY, 4, -2.4f, new Item.Properties().group(Tutorial.TAB)));
@@ -77,6 +80,7 @@ public class ModItems
     public static final RegistryObject<Item> RUBY_SLAB = ITEMS.register("ruby_slab", () -> new BlockItemBase(ModBlocks.RUBY_SLAB.get()));
     
     public static final RegistryObject<Item> RUBY_SEEDS = ITEMS.register("ruby_seeds", () -> new BlockItem(ModBlocks.RUBY_CROP.get(), new Item.Properties().group(Tutorial.TAB).isBurnable().rarity(Rarity.UNCOMMON).food(new Food.Builder().fastToEat().hunger(1).saturation(1).build()).setNoRepair()));
+    public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds", () -> new BlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties().group(Tutorial.TAB).isBurnable().rarity(Rarity.COMMON).food(new Food.Builder().fastToEat().hunger(2).saturation(2).build())));
 
     public static final RegistryObject<Item> RUBY_PLANKS_ITEM = ITEMS.register("ruby_planks", () -> new BlockItemBase(ModBlocks.RUBY_PLANKS.get()));
     public static final RegistryObject<Item> RUBY_LOG_ITEM = ITEMS.register("ruby_log", () -> new BlockItemBase(ModBlocks.RUBY_LOG.get()));

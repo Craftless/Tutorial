@@ -56,6 +56,7 @@ public class ClientEventBusSubscriber
 		ScreenManager.registerFactory(ModContainerTypes.ITEM_PEDESTAL.get(), ItemPedestalScreen::new);
 		RenderTypeLookup.setRenderLayer(ModBlocks.RUBY_SAPLING.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(ModBlocks.RUBY_CROP.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(ModBlocks.CORN_CROP.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(ModBlocks.RUBY_DOOR.get(), RenderType.getCutout());
 		
 		ItemModelsProperties.func_239418_a_(ModItems.CRYSTAL.get(), new ResourceLocation(Tutorial.MOD_ID, "count"), new IItemPropertyGetter() {

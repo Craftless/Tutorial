@@ -2,7 +2,7 @@ package com.craftless.tutorial.init;
 
 import com.craftless.tutorial.Tutorial;
 import com.craftless.tutorial.blocks.BlockQuarry;
-import com.craftless.tutorial.blocks.CustomCrop;
+import com.craftless.tutorial.blocks.CornCrop;
 import com.craftless.tutorial.blocks.CustomDoor;
 import com.craftless.tutorial.blocks.CustomSaplingBlock;
 import com.craftless.tutorial.blocks.ItemPedestalBlock;
@@ -11,6 +11,7 @@ import com.craftless.tutorial.blocks.ModButtonBlock;
 import com.craftless.tutorial.blocks.ModPressurePlateBlock;
 import com.craftless.tutorial.blocks.RubyBlock;
 import com.craftless.tutorial.blocks.RubyChestBlock;
+import com.craftless.tutorial.blocks.RubyCrop;
 import com.craftless.tutorial.blocks.RubyOre;
 import com.craftless.tutorial.blocks.TestBlock;
 
@@ -43,7 +44,8 @@ public class ModBlocks
     public static final RegistryObject<Block> RUBY_LOG = BLOCKS.register("ruby_log", () -> createLogBlock(MaterialColor.WOOD, RUBY_BLOCK.get().getMaterialColor()));
     public static final RegistryObject<Block> RUBY_LEAVES = BLOCKS.register("ruby_leaves", () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> RUBY_SAPLING = BLOCKS.register("ruby_sapling", () -> new CustomSaplingBlock(null, Block.Properties.from(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> RUBY_CROP = BLOCKS.register("ruby_crop", () -> new CustomCrop(Block.Properties.from(Blocks.WHEAT)));
+    public static final RegistryObject<Block> RUBY_CROP = BLOCKS.register("ruby_crop", () -> new RubyCrop(Block.Properties.from(Blocks.WHEAT)));
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop", () -> new CornCrop(Block.Properties.from(Blocks.WHEAT)));
     public static final RegistryObject<Block> RUBY_DOOR = BLOCKS.register("ruby_door", () -> new CustomDoor(Block.Properties.from(Blocks.OAK_DOOR)));
     
     public static final RegistryObject<Block> RUBY_STAIRS = BLOCKS.register("ruby_stairs", () -> new StairsBlock(() -> RUBY_BLOCK.get().getDefaultState(), Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
