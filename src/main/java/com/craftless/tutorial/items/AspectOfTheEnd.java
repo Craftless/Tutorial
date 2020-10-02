@@ -2,6 +2,7 @@ package com.craftless.tutorial.items;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.client.Minecraft;
+import net.minecraft.command.arguments.EntityAnchorArgument.Type;
 import net.minecraft.entity.item.EnderPearlEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.IItemTier;
@@ -26,6 +27,8 @@ public class AspectOfTheEnd extends SwordItem
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) 
 	{
+		playerIn.sendMessage(new StringTextComponent("RIGHTCLICKED"), playerIn.getUniqueID());
+
 		if (!worldIn.isRemote)
 		{
 			playerIn.sendMessage(new StringTextComponent("AOTED"), playerIn.getUniqueID());
@@ -49,9 +52,15 @@ public class AspectOfTheEnd extends SwordItem
 			{
 				EnderPearlEntity pearl = new EnderPearlEntity(worldIn, playerIn);
 				pearl.setNoGravity(true);
-				pearl.setMotion(pearl.getMotion().mul(new Vector3d(0, 0, 30)));
+				EnderPearlEntity pearl2 = new EnderPearlEntity(worldIn, playerIn.getPosX(), playerIn.getPosYEye(), playerIn.getPosZ());
+				if (pearl2.getMotion() == Vector3d.ZERO)
+				{
+					pearl2.setMotion(playerIn.getLookVec().mul(0, 0, 30));
+				}
+				pearl.setMotion(new Vector3d(0, 0, 30).mul(new Vector3d(0, 0, 30)));
 				pearl.addTag("Aspect of the End");
 				worldIn.addEntity(pearl);
+                //worldIn.addEntity(pearl2);
 				playerIn.sendMessage(new StringTextComponent("Threw enderPearl"), playerIn.getUniqueID());
 	
 			}

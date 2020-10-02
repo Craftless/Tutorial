@@ -21,7 +21,7 @@ toggleSprint:false
 mouseSensitivity:0.5
 fov:1.0
 gamma:1.0
-renderDistance:6
+renderDistance:3
 entityDistanceScaling:1.0
 guiScale:0
 particles:2
@@ -49,7 +49,7 @@ heldItemTooltips:true
 chatHeightFocused:1.0
 chatDelay: 0.0
 chatHeightUnfocused:0.44366195797920227
-chatScale:1.0
+chatScale:0.9305540323257446
 chatWidth:1.0
 mipmapLevels:4
 useNativeTransport:true

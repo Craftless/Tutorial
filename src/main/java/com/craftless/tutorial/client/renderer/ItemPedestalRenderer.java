@@ -51,7 +51,7 @@ public class ItemPedestalRenderer extends TileEntityRenderer<ItemPedestalTileEnt
 	
 	private void renderItem(ItemStack is, float partialTicks, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn)
 	{
-		Minecraft.getInstance().getItemRenderer().renderItem(is, TransformType.FIXED, combinedLightIn, OverlayTexture.NO_OVERLAY, matrixStackIn, bufferIn);
+		Minecraft.getInstance().getItemRenderer().renderItem(is, TransformType.GROUND, combinedLightIn, OverlayTexture.NO_OVERLAY, matrixStackIn, bufferIn);
 	}
 
 }

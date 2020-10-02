@@ -7,6 +7,7 @@ import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.Fluid;
+import net.minecraft.item.Items;
 import net.minecraft.item.Rarity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvents;
@@ -31,11 +32,16 @@ public class ModFluids
 	public static final ForgeFlowingFluid.Properties MILK_PROPERTIES = new ForgeFlowingFluid.Properties(() -> MILK_FLUID.get(), () -> MILK_FLOWING.get(),
 			FluidAttributes.builder(MILK_STILL_RL, MILK_FLOWING_RL)
 					.density(5)
-					.luminosity(10)
+					.luminosity(15)
 					.rarity(Rarity.RARE)
-					.sound(SoundEvents.ENTITY_ILLUSIONER_PREPARE_BLINDNESS)
 					.overlay(MILK_OVERLAY_RL)
-					.viscosity(6000)).block(() -> ModFluids.MILK_BLOCK.get());
+					.viscosity(69420)
+					.sound(SoundEvents.BLOCK_CONDUIT_ATTACK_TARGET, SoundEvents.ENTITY_ILLUSIONER_PREPARE_BLINDNESS))
+				.block(() -> ModFluids.MILK_BLOCK.get())
+				.bucket(() -> Items.MILK_BUCKET)
+				.bucket(() -> ModItems.MILK_BUCKET.get())
+				.canMultiply()
+				.explosionResistance(2);
 	
-	public static final RegistryObject<FlowingFluidBlock> MILK_BLOCK = ModBlocks.BLOCKS.register("milk", () -> new FlowingFluidBlock(() -> ModFluids.MILK_FLUID.get(), Block.Properties.create(Material.WATER).doesNotBlockMovement().hardnessAndResistance(100).noDrops()));
+	public static final RegistryObject<FlowingFluidBlock> MILK_BLOCK = ModBlocks.BLOCKS.register("milk", () -> new FlowingFluidBlock(() -> ModFluids.MILK_FLUID.get(), Block.Properties.create(Material.WATER).doesNotBlockMovement().hardnessAndResistance(100).noDrops().jumpFactor(10).variableOpacity()));
 }

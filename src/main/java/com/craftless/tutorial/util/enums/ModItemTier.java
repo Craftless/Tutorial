@@ -9,9 +9,11 @@ import net.minecraft.item.crafting.Ingredient;
 public enum ModItemTier implements IItemTier
 {
 	
-	RUBY(3, 800, 7.0f, 1.0f, 12, () -> {
+	RUBY(3, 800, 7.0f, 1.5f, 12, () -> {
 		return Ingredient.fromItems(ModItems.RUBY.get());
-	});
+	}),
+			;
+	
 	
 	private final int harvestLevel;
 	private final int maxUses;

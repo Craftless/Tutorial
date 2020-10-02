@@ -25,6 +25,7 @@ public class ExplosiveStick extends Item
 		super(new Item.Properties()
 				.group(Tutorial.TAB)
 				.rarity(Rarity.RARE)
+				.maxStackSize(1)
 		);
 	}
 	

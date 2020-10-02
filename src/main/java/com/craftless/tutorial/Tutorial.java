@@ -13,9 +13,12 @@ import com.craftless.tutorial.init.ModEntityTypes;
 import com.craftless.tutorial.init.ModFluids;
 import com.craftless.tutorial.init.ModItems;
 import com.craftless.tutorial.init.ModParticles;
+import com.craftless.tutorial.init.ModRecipeSerializers;
 import com.craftless.tutorial.init.ModSounds;
 import com.craftless.tutorial.init.ModTileEntityTypes;
+import com.craftless.tutorial.init.ModPotions;
 import com.craftless.tutorial.items.RawHogMeat;
+import com.craftless.tutorial.recipes.ModRecipeSerializer;
 import com.craftless.tutorial.util.ClientEventBusSubscriber;
 
 import net.minecraft.block.ComposterBlock;
@@ -50,9 +53,12 @@ public class Tutorial
         FMLJavaModLoadingContext.get().getModEventBus().addListener(ColorHandler::registerItemColor);
 
         ModSounds.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModPotions.POTIONS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModPotions.POTION_EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         ModEnchantments.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModRecipeSerializers.RECIPE_SERIALIZERS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModFluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModEntityTypes.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());

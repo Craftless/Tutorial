@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tutorial:explosive_arrow",
+    "tutorial:lightning_storm_arrow",
+    "tutorial:lightning_bolt_arrow",
+    "tutorial:tnt_arrow"
+  ]
+}

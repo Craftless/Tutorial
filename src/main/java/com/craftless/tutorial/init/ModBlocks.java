@@ -47,6 +47,7 @@ public class ModBlocks
     public static final RegistryObject<Block> RUBY_CROP = BLOCKS.register("ruby_crop", () -> new RubyCrop(Block.Properties.from(Blocks.WHEAT)));
     public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop", () -> new CornCrop(Block.Properties.from(Blocks.WHEAT)));
     public static final RegistryObject<Block> RUBY_DOOR = BLOCKS.register("ruby_door", () -> new CustomDoor(Block.Properties.from(Blocks.OAK_DOOR)));
+    public static final RegistryObject<Block> WHITE_BLOCK = BLOCKS.register("white_block", () -> new Block(Block.Properties.create(Material.ROCK).setLightLevel((p_235464_0_) -> {return 10;}).jumpFactor(2).slipperiness(2)));
     
     public static final RegistryObject<Block> RUBY_STAIRS = BLOCKS.register("ruby_stairs", () -> new StairsBlock(() -> RUBY_BLOCK.get().getDefaultState(), Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
     public static final RegistryObject<Block> RUBY_FENCE = BLOCKS.register("ruby_fence", () -> new FenceBlock(Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
@@ -55,12 +56,12 @@ public class ModBlocks
     public static final RegistryObject<Block> RUBY_SLAB = BLOCKS.register("ruby_slab", () -> new SlabBlock(Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
     
     
-    
     //Tile Entity
     public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", BlockQuarry::new);
     public static final RegistryObject<Block> RUBY_CHEST = BLOCKS.register("ruby_chest", () -> new RubyChestBlock(Block.Properties.from(RUBY_BLOCK.get())));
     public static final RegistryObject<Block> JAR_BLOCK = BLOCKS.register("jar_block",  JarBlock::new);
     public static final RegistryObject<Block> ITEM_PEDESTAL = BLOCKS.register("item_pedestal", () -> new ItemPedestalBlock(Block.Properties.from(Blocks.ANVIL)));
+    //public static final RegistryObject<Block> MOD_FURNACE = BLOCKS.register("mod_furnace", () -> new ModFurnaceBlock(Block.Properties.from(Blocks.ANVIL)));
     
     private static RotatedPillarBlock createLogBlock(MaterialColor topColor, MaterialColor barkColor) {
         return new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD, (p_235431_2_) -> {

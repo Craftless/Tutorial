@@ -22,18 +22,21 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.ItemModelsProperties;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent.PlayerLoggedOutEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -128,12 +131,15 @@ public class ClientEventBusSubscriber
 		{
 			if (e.getTarget().isAlive())
 			{
-				LivingEntity target = (LivingEntity) e.getTarget();
-				if (target instanceof SheepEntity)
+				if (e.getTarget() instanceof LivingEntity)
 				{
-					
-					target.addPotionEffect(new EffectInstance(Effects.LEVITATION, 5 * 20));
-					
+					LivingEntity target = (LivingEntity) e.getTarget();
+					if (target instanceof SheepEntity)
+					{
+						
+						target.addPotionEffect(new EffectInstance(Effects.LEVITATION, 5 * 20));
+						
+					}
 				}
 					
 			}
@@ -141,6 +147,30 @@ public class ClientEventBusSubscriber
 		
 		
 	} 
+	
+	@SubscribeEvent
+	public void onHurt(LivingHurtEvent e)
+	{
+		if (e.getEntityLiving() instanceof PlayerEntity)
+		{
+			PlayerEntity player = (PlayerEntity) e.getEntityLiving();
+			if (e.getSource().getImmediateSource() instanceof FireballEntity)
+			{
+				player.sendMessage(new StringTextComponent("Fireball damage"), player.getUniqueID());
+				if (e.getSource().getTrueSource() instanceof PlayerEntity)
+				{
+					player.sendMessage(new StringTextComponent("True source is player"), player.getUniqueID());
+					e.setAmount(e.getAmount() * 0.2f);
+				}
+				if (e.getSource().equals(DamageSource.GENERIC))
+				{
+					player.sendMessage(new StringTextComponent("Generic source detected"), player.getUniqueID());
+					e.setAmount(e.getAmount() * 0.2f);
+				}
+			}
+		}
+	}
+	
 	 
 	@SubscribeEvent
 	public void onsfoais(LivingDamageEvent e)
@@ -170,6 +200,24 @@ public class ClientEventBusSubscriber
 			e.setAttackDamage(1);
 		}
 	}
+
+	/*
+	@SubscribeEvent
+	public void onPlayerTick(PlayerTickEvent e)
+	{
+		PlayerEntity player = e.player;
+		for(ItemStack is : player.inventory.offHandInventory)
+		{
+			if (is.getItem() instanceof NightVisionRing)
+			{
+				if (!player.isPotionActive(Effects.NIGHT_VISION))
+				{
+					player.addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, 10*20, 1, true, false));
+				}
+			}
+		}
+	}
+	*/
 	
 	
 }

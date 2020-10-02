@@ -1,0 +1,10 @@
+{
+	"type": "tutorial:mod",
+	"output": {
+		"item": "tutorial:dorito"
+	},
+	
+	"input":{
+		"item": "tutorial:corn"
+	}
+}

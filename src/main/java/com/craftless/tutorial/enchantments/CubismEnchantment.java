@@ -43,25 +43,13 @@ public class CubismEnchantment extends Enchantment
 		return 5;
 	}
 	
-	
-	@Override
-	public void onEntityDamaged(LivingEntity user, Entity target, int level) {
-		
-		target.attackEntityFrom(DamageSource.GENERIC, 50);
-	}
-	
-	@Override
-	public float calcDamageByCreature(int level, CreatureAttribute creatureType) {
-		return super.calcDamageByCreature(level, creatureType);
-	}
-	
 	@Mod.EventBusSubscriber(modid = Tutorial.MOD_ID, bus = Bus.FORGE, value = Dist.CLIENT)
-	public static class CubsimListener
+	public static class CubismListener
 	{
 		@SubscribeEvent
 		public void onDealDamage(LivingDamageEvent e)
 		{
-			if (e.getEntityLiving() instanceof SlimeEntity || e.getEntityLiving() instanceof MagmaCubeEntity)
+			if (e.getEntityLiving() instanceof SlimeEntity || e.getEntityLiving() instanceof MagmaCubeEntity || e.getEntityLiving() instanceof ZombieEntity)
 			{
 				if (e.getSource().getTrueSource() instanceof PlayerEntity)
 				{

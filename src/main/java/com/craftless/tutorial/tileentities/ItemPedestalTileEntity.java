@@ -1,6 +1,7 @@
 package com.craftless.tutorial.tileentities;
 
 import com.craftless.tutorial.container.ItemPedestalContainer;
+import com.craftless.tutorial.init.ModItems;
 import com.craftless.tutorial.init.ModTileEntityTypes;
 
 import net.minecraft.block.BlockState;
@@ -24,7 +25,7 @@ import net.minecraftforge.common.util.Constants;
 public class ItemPedestalTileEntity extends LockableLootTileEntity implements IClearable, INamedContainerProvider
 {
 
-	protected NonNullList<ItemStack> items = NonNullList.withSize(1, ItemStack.EMPTY);
+	protected NonNullList<ItemStack> items = NonNullList.withSize(1, ModItems.MILK_BUCKET.get().getDefaultInstance());
 	
 	public ItemPedestalTileEntity(TileEntityType<?> tileEntityTypeIn) {
 		super(tileEntityTypeIn);

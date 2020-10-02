@@ -22,7 +22,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tutorial:corn_seeds"
+              "name": "tutorial:corn"
             }
           ]
         }
@@ -44,7 +44,7 @@
               }
             }
           ],
-          "name": "tutorial:corn_seeds"
+          "name": "tutorial:corn"
         }
       ],
       "conditions": [
