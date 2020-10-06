@@ -1,17 +1,17 @@
 package com.craftless.tutorial.items;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.UUID;
 
 import com.craftless.tutorial.Tutorial;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
@@ -48,33 +48,28 @@ public class Dorito extends Item{
 					double y = player.getPosY();
 					double z = player.getPosZ();
 					List<Entity> entities = player.getEntityWorld().getEntitiesWithinAABB(Entity.class,  new AxisAlignedBB(x,y,z,x+10,y+10,z+10));
-					HashMap<UUID, LivingEntity> revengeTarget = new HashMap<>();
-					HashMap<UUID, Float> AIMoveSpeed = new HashMap<>();
-					for (Entity ent : entities)
+					float f2 = 10 * 2.0F;
+				      int k1 = MathHelper.floor(player.getPosition().getX() - (double)f2 - 1.0D);
+				      int l1 = MathHelper.floor(player.getPosition().getX() + (double)f2 + 1.0D);
+				      int i2 = MathHelper.floor(player.getPosition().getY() - (double)f2 - 1.0D);
+				      int i1 = MathHelper.floor(player.getPosition().getY() + (double)f2 + 1.0D);
+				      int j2 = MathHelper.floor(player.getPosition().getZ() - (double)f2 - 1.0D);
+				      int j1 = MathHelper.floor(player.getPosition().getZ() + (double)f2 + 1.0D);
+				      List<Entity> list = player.getEntityWorld().getEntitiesWithinAABBExcludingEntity(player, new AxisAlignedBB((double)k1, (double)i2, (double)j2, (double)l1, (double)i1, (double)j1));
+					
+					
+					for (Entity ent : list)
 					{
 						if (ent.isLiving())
 						{
-							LivingEntity livingEnt = (LivingEntity) ent;
-							revengeTarget.put(livingEnt.getUniqueID(), livingEnt.getRevengeTarget());
-							livingEnt.setRevengeTarget(null);
-							AIMoveSpeed.put(livingEnt.getUniqueID(), livingEnt.getAIMoveSpeed());
-							livingEnt.setAIMoveSpeed(1);
+							LivingEntity lEnt = (LivingEntity) ent;
+							if (lEnt instanceof MonsterEntity)
+							{
+								((MonsterEntity) lEnt).setAggroed(false);
+							}
+								
 						}
 						
-					}
-					wait(1000 * 30);
-					
-					for (Entity ent : entities)
-					{
-						if (ent.isLiving())
-						{
-							LivingEntity livingEnt = (LivingEntity) ent;
-							livingEnt.setRevengeTarget(revengeTarget.get(livingEnt.getUniqueID()));
-							revengeTarget.remove(livingEnt.getUniqueID());
-							livingEnt.setAIMoveSpeed(AIMoveSpeed.get(livingEnt.getUniqueID()));
-							AIMoveSpeed.remove(livingEnt.getUniqueID());
-
-						}
 					}
 				}
 			}

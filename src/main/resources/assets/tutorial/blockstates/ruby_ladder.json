@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tutorial:block/ruby_ladder",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tutorial:block/ruby_ladder"
+    },
+    "facing=south": {
+      "model": "tutorial:block/ruby_ladder",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tutorial:block/ruby_ladder",
+      "y": 270
+    }
+  }
+}

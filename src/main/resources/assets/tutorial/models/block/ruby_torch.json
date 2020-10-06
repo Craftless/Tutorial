@@ -1,0 +1,6 @@
+{
+  "parent": "tutorial:block/ruby_template_torch",
+  "textures": {
+    "torch": "tutorial:block/ruby_torch"
+  }
+}

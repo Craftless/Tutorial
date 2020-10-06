@@ -4,6 +4,8 @@
     "tutorial:explosive_arrow",
     "tutorial:lightning_storm_arrow",
     "tutorial:lightning_bolt_arrow",
-    "tutorial:tnt_arrow"
+    "tutorial:tnt_arrow",
+    "tutorial:mining_arrow",
+    "tutorial:ender_arrow"
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:arrows"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "tutorial:lightning_bolt_arrow"
+    }
+  ],
+  "result":
+  {
+    "item": "tutorial:lightning_storm_arrow",
+    "count": 1
+  }
+}

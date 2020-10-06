@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx ",
+    "xa ",
+    " a "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "tutorial:ruby"
+    },
+    "a":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "tutorial:ruby_axe",
+    "count": 1
+  }
+}
