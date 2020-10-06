@@ -5,6 +5,7 @@ import com.craftless.tutorial.blocks.BlockQuarry;
 import com.craftless.tutorial.blocks.CornCrop;
 import com.craftless.tutorial.blocks.CustomDoor;
 import com.craftless.tutorial.blocks.CustomSaplingBlock;
+import com.craftless.tutorial.blocks.FiveTimesTNTBlock;
 import com.craftless.tutorial.blocks.InvisibleLightSourceBlock;
 import com.craftless.tutorial.blocks.ItemPedestalBlock;
 import com.craftless.tutorial.blocks.JarBlock;
@@ -56,6 +57,8 @@ public class ModBlocks
     public static final RegistryObject<Block> RUBY_DOOR = BLOCKS.register("ruby_door", () -> new CustomDoor(Block.Properties.from(Blocks.OAK_DOOR)));
     public static final RegistryObject<Block> WHITE_BLOCK = BLOCKS.register("white_block", () -> new Block(Block.Properties.create(Material.ROCK).setLightLevel((p_235464_0_) -> {return 10;}).jumpFactor(2).slipperiness(2)));
     public static final RegistryObject<Block> INVISIBLE_LIGHT_SOURCE = BLOCKS.register("invisible_light_source", () -> new InvisibleLightSourceBlock(Block.Properties.create(Material.AIR).noDrops().doesNotBlockMovement()));
+    public static final RegistryObject<Block> FIVE_TIMES_TNT_BLOCK = BLOCKS.register("five_times_tnt", () -> new FiveTimesTNTBlock(Block.Properties.create(Material.AIR).noDrops().doesNotBlockMovement()));
+
     
     public static final RegistryObject<Block> RUBY_STAIRS = BLOCKS.register("ruby_stairs", () -> new StairsBlock(() -> RUBY_BLOCK.get().getDefaultState(), Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
     public static final RegistryObject<Block> RUBY_FENCE = BLOCKS.register("ruby_fence", () -> new FenceBlock(Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));

@@ -5,6 +5,7 @@ import com.craftless.tutorial.entities.BulletEntity;
 import com.craftless.tutorial.entities.EnderArrowEntity;
 import com.craftless.tutorial.entities.ExplosiveArrowEntity;
 import com.craftless.tutorial.entities.ExplosiveCactusEntity;
+import com.craftless.tutorial.entities.FiveTimesTNTEntity;
 import com.craftless.tutorial.entities.HogEntity;
 import com.craftless.tutorial.entities.LightningBoltArrowEntity;
 import com.craftless.tutorial.entities.LightningStormArrowEntity;
@@ -43,7 +44,12 @@ public class ModEntityTypes
 				.func_233608_b_(20)
 				.build(new ResourceLocation(Tutorial.MOD_ID, "hog").toString()));
 	
-	
+	public static final RegistryObject<EntityType<FiveTimesTNTEntity>> FIVE_TIMES_TNT_ENTITY = ENTITY_TYPES.register("five_times_tnt_entity",
+			() -> EntityType.Builder.<FiveTimesTNTEntity>create(FiveTimesTNTEntity::new, EntityClassification.MISC)
+				.size(1.0f, 1.0f)
+				.func_233606_a_(4)
+				.func_233608_b_(20)
+				.build(new ResourceLocation(Tutorial.MOD_ID, "hog").toString()));
 	
 	
 	
