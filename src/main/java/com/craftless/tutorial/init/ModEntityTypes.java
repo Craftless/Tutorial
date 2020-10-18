@@ -7,8 +7,10 @@ import com.craftless.tutorial.entities.ExplosiveArrowEntity;
 import com.craftless.tutorial.entities.ExplosiveCactusEntity;
 import com.craftless.tutorial.entities.FiveTimesTNTEntity;
 import com.craftless.tutorial.entities.HogEntity;
+import com.craftless.tutorial.entities.LavaTNTEntity;
 import com.craftless.tutorial.entities.LightningBoltArrowEntity;
 import com.craftless.tutorial.entities.LightningStormArrowEntity;
+import com.craftless.tutorial.entities.LightningStormTNTEntity;
 import com.craftless.tutorial.entities.MiningArrowEntity;
 import com.craftless.tutorial.entities.TNTArrowEntity;
 
@@ -46,12 +48,27 @@ public class ModEntityTypes
 	
 	public static final RegistryObject<EntityType<FiveTimesTNTEntity>> FIVE_TIMES_TNT_ENTITY = ENTITY_TYPES.register("five_times_tnt_entity",
 			() -> EntityType.Builder.<FiveTimesTNTEntity>create(FiveTimesTNTEntity::new, EntityClassification.MISC)
-				.size(1.0f, 1.0f)
-				.func_233606_a_(4)
-				.func_233608_b_(20)
-				.build(new ResourceLocation(Tutorial.MOD_ID, "hog").toString()));
+				.immuneToFire()
+				.size(0.98F, 0.98F)
+				.func_233606_a_(10)
+				.func_233608_b_(10)
+				.build(new ResourceLocation(Tutorial.MOD_ID, "tnt").toString()));
 	
+	public static final RegistryObject<EntityType<LightningStormTNTEntity>> LIGHTNING_STORM_TNT_ENTITY = ENTITY_TYPES.register("lightning_storm_tnt",
+			() -> EntityType.Builder.<LightningStormTNTEntity>create(LightningStormTNTEntity::new, EntityClassification.MISC)
+				.immuneToFire()
+				.size(0.98F, 0.98F)
+				.func_233606_a_(10)
+				.func_233608_b_(10)
+				.build("lightning_storm_tnt"));
 	
+	public static final RegistryObject<EntityType<LavaTNTEntity>> LAVA_TNT_ENTITY = ENTITY_TYPES.register("lava_tnt",
+			() -> EntityType.Builder.<LavaTNTEntity>create(LavaTNTEntity::new, EntityClassification.MISC)
+				.immuneToFire()
+				.size(0.98F, 0.98F)
+				.func_233606_a_(10)
+				.func_233608_b_(10)
+				.build("lightning_storm_tnt"));
 	
 	
 	

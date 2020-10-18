@@ -5,17 +5,20 @@ import com.craftless.tutorial.blocks.BlockQuarry;
 import com.craftless.tutorial.blocks.CornCrop;
 import com.craftless.tutorial.blocks.CustomDoor;
 import com.craftless.tutorial.blocks.CustomSaplingBlock;
-import com.craftless.tutorial.blocks.FiveTimesTNTBlock;
 import com.craftless.tutorial.blocks.InvisibleLightSourceBlock;
 import com.craftless.tutorial.blocks.ItemPedestalBlock;
 import com.craftless.tutorial.blocks.JarBlock;
 import com.craftless.tutorial.blocks.ModButtonBlock;
 import com.craftless.tutorial.blocks.ModPressurePlateBlock;
+import com.craftless.tutorial.blocks.ModTNTBlock;
 import com.craftless.tutorial.blocks.RubyBlock;
 import com.craftless.tutorial.blocks.RubyChestBlock;
 import com.craftless.tutorial.blocks.RubyCrop;
 import com.craftless.tutorial.blocks.RubyOre;
 import com.craftless.tutorial.blocks.TestBlock;
+import com.craftless.tutorial.entities.FiveTimesTNTEntity;
+import com.craftless.tutorial.entities.LavaTNTEntity;
+import com.craftless.tutorial.entities.LightningStormTNTEntity;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -57,8 +60,9 @@ public class ModBlocks
     public static final RegistryObject<Block> RUBY_DOOR = BLOCKS.register("ruby_door", () -> new CustomDoor(Block.Properties.from(Blocks.OAK_DOOR)));
     public static final RegistryObject<Block> WHITE_BLOCK = BLOCKS.register("white_block", () -> new Block(Block.Properties.create(Material.ROCK).setLightLevel((p_235464_0_) -> {return 10;}).jumpFactor(2).slipperiness(2)));
     public static final RegistryObject<Block> INVISIBLE_LIGHT_SOURCE = BLOCKS.register("invisible_light_source", () -> new InvisibleLightSourceBlock(Block.Properties.create(Material.AIR).noDrops().doesNotBlockMovement()));
-    public static final RegistryObject<Block> FIVE_TIMES_TNT_BLOCK = BLOCKS.register("five_times_tnt", () -> new FiveTimesTNTBlock(Block.Properties.create(Material.AIR).noDrops().doesNotBlockMovement()));
-
+    public static final RegistryObject<Block> FIVE_TIMES_TNT_BLOCK = BLOCKS.register("five_times_tnt", () -> new ModTNTBlock(Block.Properties.from(Blocks.TNT), FiveTimesTNTEntity.class));
+    public static final RegistryObject<Block> LIGHTNING_STORM_TNT_BLOCK = BLOCKS.register("lightning_storm_tnt", () -> new ModTNTBlock(Block.Properties.from(Blocks.TNT), LightningStormTNTEntity.class));
+    public static final RegistryObject<Block> LAVA_TNT_BLOCK = BLOCKS.register("lava_tnt", () -> new ModTNTBlock(Block.Properties.from(Blocks.TNT), LavaTNTEntity.class));
     
     public static final RegistryObject<Block> RUBY_STAIRS = BLOCKS.register("ruby_stairs", () -> new StairsBlock(() -> RUBY_BLOCK.get().getDefaultState(), Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));
     public static final RegistryObject<Block> RUBY_FENCE = BLOCKS.register("ruby_fence", () -> new FenceBlock(Block.Properties.from(ModBlocks.RUBY_PLANKS.get())));

@@ -74,12 +74,12 @@ public class TelekinesisEnchantment extends Enchantment
 	            final ServerWorld serverWorld = server.getWorld(World.field_234918_g_);
 	            
 	            ItemDropsPlusEXP idpe = ClientEventBusSubscriber.getItems(world, bp, player);
-	            boolean thereIsSpace = true;
+	            boolean thereIsSpace = false;
 	            for (int i = 0; i < 36; i++)
 	            {
 	            	if (player.inventory.getStackInSlot(i) == ItemStack.EMPTY)
 	            	{
-	            		thereIsSpace = false;
+	            		thereIsSpace = true;
 	            	}
 	            }
 	            

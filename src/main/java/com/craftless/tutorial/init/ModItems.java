@@ -113,7 +113,9 @@ public class ModItems
     public static final RegistryObject<Item> WHITE_BLOCK_ITEM = ITEMS.register("white_block", () -> new BlockItemBase(ModBlocks.WHITE_BLOCK.get()));
     public static final RegistryObject<Item> INVISIBLE_LIGHT_SOURCE_ITEM = ITEMS.register("invisible_light_source", () -> new BlockItemBase(ModBlocks.INVISIBLE_LIGHT_SOURCE.get()));
     public static final RegistryObject<Item> FIVE_TIMES_TNT_ITEM = ITEMS.register("five_times_tnt", () -> new BlockItemBase(ModBlocks.FIVE_TIMES_TNT_BLOCK.get()));
-    
+    public static final RegistryObject<Item> LIGHTNING_STORM_TNT_ITEM = ITEMS.register("lightning_storm_tnt", () -> new BlockItemBase(ModBlocks.LIGHTNING_STORM_TNT_BLOCK.get()));
+    public static final RegistryObject<Item> LAVA_TNT_ITEM = ITEMS.register("lava_tnt", () -> new BlockItemBase(ModBlocks.LAVA_TNT_BLOCK.get()));
+
     public static final RegistryObject<Item> QUARRY = ITEMS.register("quarry", () -> new BlockItemBase(ModBlocks.QUARRY.get()));
     public static final RegistryObject<Item> RUBY_CHEST = ITEMS.register("ruby_chest", () -> new BlockItemBase(ModBlocks.RUBY_CHEST.get()));
     public static final RegistryObject<Item> JAR_BLOCK = ITEMS.register("jar_block", () -> new BlockItemBase(ModBlocks.JAR_BLOCK.get()));

@@ -16,6 +16,7 @@ import com.craftless.tutorial.blocks.InvisibleLightSourceBlock;
 import com.craftless.tutorial.client.gui.ItemPedestalScreen;
 import com.craftless.tutorial.client.gui.JarScreen;
 import com.craftless.tutorial.client.gui.RubyChestScreen;
+import com.craftless.tutorial.client.renderer.FiveTimesTNTRenderer;
 import com.craftless.tutorial.client.renderer.HogRenderer;
 import com.craftless.tutorial.client.renderer.ItemPedestalRenderer;
 import com.craftless.tutorial.entities.LightningStormArrowEntity;
@@ -27,8 +28,6 @@ import com.craftless.tutorial.init.ModEnchantments;
 import com.craftless.tutorial.init.ModEntityTypes;
 import com.craftless.tutorial.init.ModItems;
 import com.craftless.tutorial.init.ModTileEntityTypes;
-import com.craftless.tutorial.items.FreezingSwordItem;
-import com.craftless.tutorial.items.LightningSwordItem;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -92,6 +91,7 @@ public class ClientEventBusSubscriber
 	public static void onClientSetup(FMLClientSetupEvent e)
 	{
 		RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.HOG.get(), HogRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.FIVE_TIMES_TNT_ENTITY.get(), FiveTimesTNTRenderer::new);
 		ScreenManager.registerFactory(ModContainerTypes.RUBY_CHEST.get(), RubyChestScreen::new);
 		ScreenManager.registerFactory(ModContainerTypes.JAR.get(), JarScreen::new);
 		ScreenManager.registerFactory(ModContainerTypes.ITEM_PEDESTAL.get(), ItemPedestalScreen::new);
