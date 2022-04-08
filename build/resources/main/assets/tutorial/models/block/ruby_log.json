@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "tutorial:block/ruby_log_top",
-    "side": "tutorial:block/ruby_log"
-  }
-}

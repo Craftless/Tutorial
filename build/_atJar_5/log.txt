@@ -1,5 +1,0 @@
-Args: "--inJar", "/Users/javiertan/Development/Mods/Tutorial/build/fg_cache/net/minecraftforge/forge/1.16.1-32.0.63/forge-1.16.1-32.0.63-injected.jar", "--outJar", "/Users/javiertan/Development/Mods/Tutorial/build/fg_cache/net/minecraftforge/forge/1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1/forge-1.16.1-32.0.63_mapped_snapshot_20200723-1.16.1.jar", "--logFile", "accesstransform.log", "--atFile", "/Users/javiertan/Development/Mods/Tutorial/src/main/resources/META-INF/accesstransformer.cfg", "--atFile", "/Users/javiertan/Development/Mods/Tutorial/build/_atJar_5/parent_at.cfg"
-Classpath: /Users/javiertan/.gradle/caches/forge_gradle/maven_downloader/net/minecraftforge/accesstransformers/1.0.5/accesstransformers-1.0.5-fatjar.jar
-WorkDir: /Users/javiertan/Development/Mods/Tutorial/build/_atJar_5
-Main: net.minecraftforge.accesstransformer.TransformerProcessor
-====================================

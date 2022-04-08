@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "tutorial:block/ruby_block",
-    "top": "tutorial:block/ruby_block",
-    "side": "tutorial:block/ruby_block"
-  }
-}
